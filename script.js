@@ -8,7 +8,7 @@ const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${acc
 const gallery = document.querySelector('.gallery');
 
 
-let allImages; // this will store all the images
+let allImages;
 let current_image;
 
 const getImages = () => {
@@ -19,6 +19,7 @@ const getImages = () => {
         makeImages(allImages);
     });
 }
+
 
 const searchImages = () => {
   fetch(search_photo_url)
@@ -33,18 +34,15 @@ const searchImages = () => {
 const makeImages = (data) => {
   data.forEach((item, index) => {
 
-    let img = document.createElement('img');
-    img.src = item.urls.regular;
-    img.className = 'gallery-img';
+      let img = document.createElement('img');
+      img.src = item.urls.regular;
+      img.className = 'gallery-img';
 
-    gallery.appendChild(img);
+      gallery.appendChild(img);
 
-    img.addEventListener('click', () => {
-      current_image = index;
-      showPopup(item);
-    })
   })
 }
+
 const showPopup = (item) => {
   let popup = document.querySelector('.image-popup');
   const downloadBtn = document.querySelector('.download-btn');
