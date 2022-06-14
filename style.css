@@ -97,3 +97,72 @@
   background: grey;
 }
 
+.image-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80vh;
+  background: rgba(255, 255, 255);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.image-popup.hide {
+  display: none;
+  opacity: 0;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background: rgb(153, 0, 255);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.download-btn {
+  text-transform: capitalize;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ddd;
+  text-decoration: none;
+}
+.large-img {
+  height: 80%;
+  width: auto;
+  max-width: 80%;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.pre-btn, .next-btn {
+  position: absolute;
+  padding: 8px;
+  transition: all 0.5s;
+  opacity: 0.5;
+  font-size: 50px;
+}
+.pre-btn {
+  left: 10px;
+}
+.next-btn {
+  right: 10px;
+}
+.controls #pre-btn:hover {
+  transform: scale(1.5);
+}
+.controls #next-btn:hover {
+  transform: scale(1.5);
+}
