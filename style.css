@@ -126,6 +126,16 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.5s;
+}
+.close-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.close-btn:active {
+  transform: scale(1.2);
+  background: rgb(153, 0, 255, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .download-btn {
   text-transform: capitalize;
@@ -160,9 +170,11 @@
 .next-btn {
   right: 10px;
 }
-.controls #pre-btn:hover {
+.pre-btn:hover {
   transform: scale(1.5);
 }
-.controls #next-btn:hover {
+
+.next-btn:hover {
   transform: scale(1.5);
 }
+

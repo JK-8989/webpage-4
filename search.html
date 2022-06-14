@@ -6,20 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unsplash Clone</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="search.css">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </head>
 <body>
-  <header class="header-section">
-    <div class="header-content">
-        <h1 class="logo">logo</h1>
-        <p class="sub-line">the best royalty free images you can find here.</p>
+  <form action="search.html" class="search-container">
+    <input type="text" autocomplete="off" name="search" class="search-input" placeholder="search image">
+    <button class="search" type="submit">search</button>
+  </form>
 
-        <form action="search.html">
-            <input type="text" autocomplete="off" name="search" class="search-box" placeholder="search image">
-            <button class="search-btn" type="submit">search</button>
-        </form>
-    </div>
-</header>
 <div class="image-popup hide">
   <button class="close-btn"></button>
   <a href="#" class="download-btn">download image</a>
