@@ -4,12 +4,15 @@
   box-sizing: border-box;
 }
 
+/* landing page */
+
 .header-section{
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: 70vh;
   position: relative;
-  background-image: url('https://images.unsplash.com/photo-1431032843361-ec2cd229c751?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
-  background-size: cover;
+  background-image: url('https://images.unsplash.com/photo-1431032843361-ec2cd229c751?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+  background-size:cover;
+  background-position:top;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +61,7 @@
 
 .search-box{
   display: block;
-  margin: 60px 0 20px 0;
+  margin: 60px auto 30px auto;
   width: 100%;
   height: 40px;
   border-radius: 5px;
@@ -78,21 +81,116 @@
   background: rgba(0, 0, 0, 0.5);
   color: rgba(255, 255, 255, 0.8);
 }
+
+input::placeholder {
+  letter-spacing: 1px;
+}
+
 /* gallery */
 
 .gallery {
   width: 100%;
+  height: auto;
   padding: 40px;
   background: #222;
-  columns: 4;
+  columns: 5;
   column-gap: 20px;
+  transition: all 0.5s;
 }
-
-@media (max-width: 1200px ){
+@media only screen and (max-width: 600px) {
+  .search-box {
+    width: 80%;
+  }
+  .sub-line {
+    font-size: 15px;
+  }
+  .logo {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .gallery {
+    columns: 1;
+  }
+}
+@media only screen and (min-width: 501px) {
   .gallery {
     columns: 3;
   }
 }
+@media only screen and (min-width: 1000px) {
+  .gallery {
+    columns: 5;
+  }
+}
+
+
+
+/* @media (min-width: 601px ){
+  .gallery {
+    columns: 3;
+  }
+}
+@media (max-width: 600px ){
+  .gallery {
+    columns: 1;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------- */
+/* from photo gallery project */
+
+.item {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  vertical-align: top;
+  margin-bottom: 1em;
+  object-fit: cover;
+}
+.item:hover {
+  box-shadow: 0 0 5px 3px rgba(0,0,0,0.3);
+}
+h2 {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  background: rgba(0,0,0,0.3);
+  color: rgba(255,255,255, 0.6);
+  bottom: 0;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+.item:hover h2 {
+  opacity: 1;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* ------------------------------- */
+
+
+
+
 
 .gallery-img {
   width: 100%;
@@ -102,6 +200,7 @@
   cursor: pointer;
   background: grey;
 }
+
 
 .image-popup {
   position: fixed;
