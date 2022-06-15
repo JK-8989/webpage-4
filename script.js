@@ -7,7 +7,6 @@
 
 // const gallery = document.querySelector('.gallery');
 
-
 // let allImages;
 // let current_image;
 
@@ -20,7 +19,6 @@
 //     });
 // }
 
-
 // const searchImages = () => {
 //   fetch(search_photo_url)
 //   .then(res => res.json())
@@ -29,7 +27,6 @@
 //       makeImages(allImages);
 //   });
 // }
-
 
 // const makeImages = (data) => {
 //   data.forEach((item, index) => {
@@ -59,8 +56,6 @@
 //   showPopup()
 // }
 
-
-
 // if(searchParam == ''){
 //   getImages();
 // }else{
@@ -78,57 +73,134 @@
 //   if(current_image > 0){
 //     current_image--;
 //     showPopup(allImages[current_image]);
-//   } 
+//   }
 // })
 // nextBtn.addEventListener('click', () => {
 //   if(current_image < allImages.length -1){
 //     current_image++;
 //     showPopup(allImages[current_image]);
-//   } 
+//   }
 // })
 
-
 //===============================
-// Unsplash
+// Unsplash Radom Photo API
 const access_key = 'ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20';
-const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=12`;
-// ------------------------
-
+const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=5`;
 
 const gallery = document.querySelector('.gallery');
-// const img = document.querySelector('img')
-
 
 let allImages;
+let current_image = 0;
 
 const getImages = () => {
   fetch(random_photo_url)
-  .then(res => res.json())
-  .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
       allImages = data;
       makeImages(allImages);
-  });
-}
+    });
+};
 
 const makeImages = (data) => {
-  data.forEach((item, index) => {
+  data.forEach((photo, index) => {
+    console.log(photo);
 
-      let img = document.createElement('img');
-      let itemDiv = document.createElement('div');
-      let h2 = document.createElement('h2');
-      let a = document.createElement('a');
-      const text = document.createTextNode('Photographer');
-      img.src = item.urls.regular;
+    let img = document.createElement('img');
+    let itemDiv = document.createElement('div');
+    let h2 = document.createElement('h2');
+    let a = document.createElement('a');
+
+    const text = document.createTextNode(
+      photo.user.first_name + " " + photo.user.last_name
+    );
+    img.src = photo.urls.regular;
+
+    gallery.appendChild(itemDiv);
+    itemDiv.className = 'item';
+    itemDiv.appendChild(a);
+    a.appendChild(img);
+    a.appendChild(h2);
+    h2.appendChild(text);
+
+    // popup image
+
+    img.addEventListener('click', () => {
+      current_image = index;
+      showPopup(photo);
+    })
     
-
-      gallery.appendChild(itemDiv);
-      itemDiv.className = 'item';
-      itemDiv.appendChild(a);
-      a.appendChild(img);
-      a.appendChild(h2);
-      h2.appendChild(text);
-
   })
 }
 
+const showPopup = (photo) => {
+  let popup = document.querySelector('.popup-bg');
+  const image = document.querySelector('.large-img');
+  const closeBtn = document.querySelector('.close-btn');
+  const downloadBtn = document.querySelector('.download-btn');
+
+  const info = document.querySelector('.info');
+
+  popup.classList.remove('hide');
+  gallery.classList.remove('hide');
+  downloadBtn.href = photo.links.html;
+  image.src = photo.urls.regular;
+
+  info.innerHTML = `Photo by ${photo.user.first_name} ${photo.user.last_name}   |     
+                    ${photo.user.location }   |   ${photo.exif.name}`
+
+
+  closeBtn.addEventListener('click', ()=>{
+    popup.classList.add('hide');
+    gallery.classList.add('hide');
+  })
+
+    popup.addEventListener('click', ()=>{
+    popup.classList.add('hide');
+    gallery.classList.add('hide');
+  })
+
+}
+
 getImages();
+
+
+
+
+
+
+
+
+
+
+
+        // photo info
+
+        // const info = document.querySelector('.info');
+        // const info_text = document.createTextNode(
+      
+        //   `Photo by ${photo.user.first_name} ${photo.user.last_name}   |     
+        //             ${photo.user.location }   |   ${photo.exif.name}`
+        // );
+      
+        // info.appendChild(info_text);
+        //===============
+
+
+
+
+// const showPopup = (item) => {
+//   let popup = document.querySelector('.image-popup');
+//   const downloadBtn = document.querySelector('.download-btn');
+//   const closeBtn = document.querySelector('.close-btn');
+//   const image = document.querySelector('.large-img');
+
+//   popup.classList.remove('hide');
+//   downloadBtn.href = item.links.html;
+//   image.src = item.urls.regular;
+
+//   closeBtn.addEventListener('click', ()=>{
+//     popup.classList.add('hide');
+//   })
+//   showPopup()
+// }
