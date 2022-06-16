@@ -56,6 +56,11 @@ const makeImages = (data) => {
 		current_image = index;
 		showPopup(photo);
 		});
+
+    h2.addEventListener("click", () => {
+		current_image = index;
+		showPopup(photo);
+		});
 	});
 };
 
