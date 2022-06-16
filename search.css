@@ -38,15 +38,11 @@
 }
 #search-icon {
   font-size: 30px;
-  cursor: pointer;
   position: absolute;
   top: 5px;
   right: 8px;
   color: rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
-}
-#search-icon:hover {
-  transform: scale(1.1);
 }
 @media (max-width: 600px)  {
   .search-container {

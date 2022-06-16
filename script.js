@@ -161,9 +161,10 @@ const showPopup = (photo) => {
   downloadBtn.href = photo.links.html;
   image.src = photo.urls.regular;
 
-  info.innerHTML = `Photo by ${photo.user.name}  |     
-                    ${photo.user.location }   |   ${photo.exif.name}`
+  // info.innerHTML = `Photo by ${photo.user.name} |    
+  //                   ${photo.user.location } | ${photo.exif.name}`
 
+  info.innerHTML = 'Photo by ' + '&nbsp' + photo.user.name + '&nbsp &nbsp &nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp &nbsp &nbsp' + photo.user.location + '&nbsp &nbsp &nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp &nbsp &nbsp' + photo.exif.name
 
   closeBtn.addEventListener('click', ()=>{
     popup.classList.add('hide');

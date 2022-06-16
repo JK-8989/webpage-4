@@ -100,10 +100,8 @@ input::placeholder {
   letter-spacing: 1px;
 }
 form {
- 
   position: relative;
   display: flex;
-  
 }
 #search-icon {
   font-size: 24px;
@@ -137,6 +135,7 @@ form {
     right: 45px;
   }
 }
+
 @media only screen and (max-width: 500px) {
   .gallery {
     columns: 1;
@@ -145,11 +144,13 @@ form {
     right: 50px;
   }
 }
+
 @media only screen and (min-width: 501px) {
   .gallery {
     columns: 3;
   }
 }
+
 @media only screen and (min-width: 1000px) {
   .gallery {
     columns: 5;
@@ -189,7 +190,7 @@ h2 {    /*Photographer name*/
                                       rgba(0,0,0,0));
   color: rgba(255,255,255, 0.8);
   bottom: 0;
-  font-size: 0.8rem;
+  font-size: 13px;
   letter-spacing: 2px;
   transition: opacity 0.5s;
   opacity: 0;
@@ -300,9 +301,11 @@ h2 {    /*Photographer name*/
   padding: 30px 0 10px 20px;
   color: rgba(0, 0, 0, 0.7);
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 100;
   z-index: 3;
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }
 
 .pre-btn, .next-btn {
