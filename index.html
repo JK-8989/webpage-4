@@ -1,98 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-  <title>Searchable Image Gallery</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <title>Searchable Image Gallery</title>
 </head>
 <body>
-  <header class="header-section">
+    <header class="header-section">
     <div class="header-content">
         <h1 class="logo">Inspiration</h1>
         <p class="sub-line">Search royalty free images and get inspired.</p>
-
         <form action="search.html" target="_blank">
             <input type="text" autocomplete="off" name="search" class="search-box" placeholder="search image">
-            <!-- <button class="search search-btn" type="submit">search</button> -->
-              <span id="search-icon" class="material-icons-outlined">search</span>
+            <span id="search-icon" class="material-icons-outlined">search</span>
         </form>
     </div>
 </header>
 <div class="popup-bg hide">
-  <button class="close-btn">
-    <ion-icon name="close-outline"></ion-icon>
-  </button>
-  <a href="#" target="_blank" class="download-btn" tooltip="download">
-    <ion-icon name="link-outline"></ion-icon>
-  </a>
+    <button class="close-btn">
+        <ion-icon name="close-outline"></ion-icon>
+    </button>
+    <a href="#" target="_blank" class="download-btn">
+        <ion-icon name="link-outline"></ion-icon>
+    </a>
 
 
     <img src="" class="large-img" alt="">
     <p class="info"></p>
 
-
-
-  <a class="pre-btn"><ion-icon name="chevron-back-outline"></ion-icon></a>
-  <a class="next-btn"><ion-icon name="chevron-forward-outline"></ion-icon></a>
+    <a class="pre-btn"><ion-icon name="chevron-back-outline"></ion-icon></a>
+    <a class="next-btn"><ion-icon name="chevron-forward-outline"></ion-icon></a>
 </div>
-<section class="gallery hide">
+<section class="gallery hide"></section>
 
-  <!-- <div class="item">
-    <a href="#">
-      <img src="../webpage-1/images/09931.png" alt="">
-      <h2>photographer</h2>
-    </a>
-  </div>
-  <div class="item">
-    <a href="#">
-      <img src="../webpage-1/images/09932.png" alt="">
-      <h2>photographer</h2>
-    </a>
-  </div>
-  <div class="item">
-    <a href="#">
-      <img src="../webpage-1/images/09933.png" alt="">
-      <h2>photographer</h2>
-    </a>
-  </div>
-  <div class="item">
-    <a href="#">
-      <img src="../webpage-1/images/09934.png" alt="">
-      <h2>photographer</h2>
-    </a>
-  </div>
-  <div class="item">
-    <a href="#">
-      <img src="../webpage-1/images/09935.png" alt="">
-      <h2>photographer</h2>
-    </a>
-  </div>
-  <div class="item">
-    <a href="#">
-      <img src="../webpage-1/images/09936.png" alt="">
-      <h2>photographer</h2>
-    </a>
-  </div>
-  <div class="item">
-    <a href="#">
-      <img src="../webpage-1/images/09937.png" alt="">
-      <h2>photographer</h2>
-    </a>
-  </div>
-  <div class="item">
-    <a href="#">
-      <img src="../webpage-1/images/09938.png" alt="">
-      <h2>photographer</h2>
-    </a>
-  </div> -->
-
-
-</section>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
