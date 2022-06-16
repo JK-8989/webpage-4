@@ -20,9 +20,10 @@
 .large-img {
 	border: none;
 }
-.image-popup {
+/* .image-popup {
 	display: none;
-}
+} */
+
 .home-icon .material-icons {
 	color: rgba(221, 221, 221, 0.8);
 	font-size: 36px;

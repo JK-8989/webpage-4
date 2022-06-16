@@ -103,9 +103,6 @@ form {
 	top: 52%;
 	color: var(--half_opaque_black);
 }
-
-/* gallery */
-
 .header-section::before {
 	content: '';
 	width: 100vw;
@@ -116,10 +113,13 @@ form {
 		rgba(0,0,0,0.2) 60%,
 		rgba(0,0,0,0.3) 80%,
 		rgba(0,0,0,0.4) 100%
-	  );
+	);
 	position: absolute;
 	bottom: 0;
 }
+
+/* gallery */
+
 .gallery {
 	width: 100vw;
 	height: auto;
@@ -188,6 +188,7 @@ img {
 	margin: 0;
 	vertical-align: top;
 	user-select: none;
+	cursor: pointer;
 }
 
 h2 {
@@ -202,6 +203,7 @@ h2 {
 	letter-spacing: 2px;
 	transition: opacity 0.5s;
 	opacity: 0;
+	cursor: pointer;
 }
 
 .item:hover h2 {
