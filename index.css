@@ -191,10 +191,13 @@ form {
 	vertical-align: top;
 	margin-bottom: 1em;
 	object-fit: cover;
+	box-sizing: border-box;
+	border: 1px solid rgba(255, 255, 255, 0);
+	transition: border 0.3s;
 }
 
 .item:hover {
-	box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 img {
