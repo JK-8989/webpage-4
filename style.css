@@ -80,7 +80,7 @@ body {
 .search-btn{
   padding: 10px 30px;
   border-radius: 5px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   border: none;
   outline: none;
   cursor: pointer;
@@ -256,7 +256,7 @@ h2 {    /*Photographer name*/
   border-radius: 10px;
   cursor: pointer;
   user-select: none;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   box-shadow: 0 0 10px 3px rgba(0,0,0,0.3);
   overflow: hidden;
 

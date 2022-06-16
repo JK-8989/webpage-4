@@ -84,8 +84,12 @@
 
 //===============================
 // Unsplash Radom Photo API
+let searchWords = location.search.split('=').pop();
+
 const access_key = 'ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20';
-const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=5`;
+const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=19`;
+const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=10`;
+
 
 const gallery = document.querySelector('.gallery');
 
@@ -94,6 +98,16 @@ let current_image = 0;
 
 const getImages = () => {
   fetch(random_photo_url)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      allImages = data;
+      makeImages(allImages);
+    });
+};
+
+const searchImages = () => {
+  fetch(search_photo_url)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
@@ -164,17 +178,30 @@ const showPopup = (photo) => {
 
 }
 
-getImages();
+if(searchWords === ''){
+  getImages();
+} else {
+  searchImages();
+}
+
+
 
 // pre & next button
 
 const preBtn = document.querySelector('.pre-btn');
-const nextBtn = document.querySelector('next-btn');
+const nextBtn = document.querySelector('.next-btn');
 
-preBtn.addEventListener('click', ()=>{
-  showPopup(allImages[current_image]);
-})
-nextBtn.addEventListener('click', ()=>{
-  showPopup(allImages[current_image]);
-})
+preBtn.addEventListener('click', () => {
+    if(current_image > 0){
+      current_image--;
+      showPopup(allImages[current_image]);
+    }
+  })
+nextBtn.addEventListener('click', () => {
+    if(current_image < allImages.length -1){
+      current_image++;
+      showPopup(allImages[current_image]);
+    }
+  })
+
 

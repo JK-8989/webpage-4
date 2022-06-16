@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unsplash Clone</title>
+  <title>Searchable Image Gallery</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="search.css">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -12,17 +12,17 @@
 <body>
   <form action="search.html" class="search-container">
     <input type="text" autocomplete="off" name="search" class="search-input" placeholder="search image">
-    <button class="search" type="submit">search</button>
-  </form>
+    <button class="search search-btn" type="submit">search</button>
+</form>
 
 <div class="image-popup hide">
   <button class="close-btn"></button>
-  <a href="#" class="download-btn">download image</a>
+  <a href="#" class="download-btn"></a>
   <img src="" class="large-img" alt="">
-  <a class="controls pre-btn"><ion-icon name="chevron-back-outline"></ion-icon></a>
-  <a class="controls next-btn"><ion-icon name="chevron-forward-outline"></ion-icon></a>
+  <a class="pre-btn"><ion-icon name="chevron-back-outline"></ion-icon></a>
+  <a class="next-btn"><ion-icon name="chevron-forward-outline"></ion-icon></a>
 </div>
-<section class="gallery"></section>
+<section class="gallery hide"></section>
 
   <script src="script.js"></script>
 </body>
