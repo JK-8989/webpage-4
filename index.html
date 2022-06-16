@@ -7,16 +7,20 @@
   <title>Searchable Image Gallery</title>
   <link rel="stylesheet" href="style.css">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 </head>
 <body>
   <header class="header-section">
     <div class="header-content">
-        <h1 class="logo">logo</h1>
-        <p class="sub-line">the best royalty free images you can find here.</p>
+        <h1 class="logo">Inspiration</h1>
+        <p class="sub-line">Search royalty free images and get inspired.</p>
 
-        <form action="search.html">
+        <form action="search.html" target="_blank">
             <input type="text" autocomplete="off" name="search" class="search-box" placeholder="search image">
-            <button class="search search-btn" type="submit">search</button>
+            <!-- <button class="search search-btn" type="submit">search</button> -->
+              <span id="search-icon" class="material-icons-outlined">search</span>
         </form>
     </div>
 </header>
@@ -91,6 +95,6 @@
 
 </section>
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 </body>
 </html>
