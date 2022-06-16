@@ -27,13 +27,14 @@ const searchImages = () => {
 			console.log(data);
 			allImages = data.results;
 			makeImages(allImages);
+			console.log('all-images:' + allImages);
 		});
 };
 
 const makeImages = (data) => {
 	data.forEach((photo, index) => {
 		console.log(photo);
-//testing
+
     let img = document.createElement("img");
     let itemDiv = document.createElement("div");
     let h2 = document.createElement("h2");
@@ -77,21 +78,20 @@ const showPopup = (photo) => {
 	downloadBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
 
-  // info.innerHTML = `Photo by ${photo.user.name} |
-  //                   ${photo.user.location } | ${photo.exif.name}`
+	// info.innerHTML = `${photo.user.name} |
+	// 				${photo.user.location } | 
+	// 				${photo.height} x ${photo.width}`
 
 	info.innerHTML =
-    "Photo by " +
-    "&nbsp" +
-    photo.user.name +
-    "&nbsp &nbsp &nbsp &nbsp &nbsp" +
-    "|" +
-    "&nbsp &nbsp &nbsp &nbsp &nbsp" +
-    photo.user.location +
-    "&nbsp &nbsp &nbsp &nbsp &nbsp" +
-    "|" +
-    "&nbsp &nbsp &nbsp &nbsp &nbsp" +
-    photo.exif.name;
+		photo.user.name +
+		'&nbsp &nbsp &nbsp &nbsp &nbsp' +
+		'|' +
+		'&nbsp &nbsp &nbsp &nbsp &nbsp' +
+		photo.user.location +
+		'&nbsp &nbsp &nbsp &nbsp &nbsp' +
+		'|' +
+		'&nbsp &nbsp &nbsp &nbsp &nbsp' +
+		photo.height + ' x ' + photo.width;
 
 	closeBtn.addEventListener("click", () => {
 		popup.classList.add("hide");
@@ -99,11 +99,12 @@ const showPopup = (photo) => {
 	});
 
 	
-  // hit bg to close
-  //   bg.addEventListener('click', ()=>{
-  //   bg.classList.add('hide');
-  //   gallery.classList.add('hide');
-  // })
+	//hit image to close
+	image.addEventListener('click', ()=>{
+		popup.classList.add('hide');
+		gallery.classList.add('hide');
+	})
+
 };
 
 if (searchWords === "") {
