@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
-	--main_color: rgb(0, 0, 0);
-	--main_text: rgb(255, 255, 255);
-	--half_opaque_black: rgba(0, 0, 0, 0.5)
+	--main_color: rgba(0, 0, 0, 1);
+	--main_text: rgba(255, 255, 255, 1);
+	--half_opaque_black: rgba(0, 0, 0, 0.5);
+	--popup_text: rgba(255, 255, 255, 0.8);
+	/* --half_opaque_white: rgba(255, 255, 255) */
+	
 }
 * {
 	margin: 0;
@@ -219,16 +222,12 @@ h2 {
 	transform: translate(-50%, -50%);
 	width: 80%;
 	height: 80vh;
-	background: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(10px);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 	border-radius: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	z-index: 2;
 	overflow: hidden;
-	opacity: 1;
 	transition: all 0.5s ease;
 }
 .gallery {
@@ -238,8 +237,8 @@ h2 {
 	content: "";
 	width: 100vw;
 	height: 100vh;
-	background: var(--half_opaque_black);
-	backdrop-filter: blur(20px);
+	background: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(30px);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -262,7 +261,8 @@ h2 {
 	cursor: pointer;
 	font-size: 30px;
 	background: transparent;
-	color: var(--half_opaque_black);
+	color: var(--popup_text);
+	opacity: 0.5;
 	padding: 10px;
 	transition: all 0.5s;
 }
@@ -272,17 +272,18 @@ h2 {
 .close-btn:active {
 	transform: scale(1.2);
 	background: rgb(153, 0, 255, 0.5);
-	box-shadow: 0 0 5px var(--half_opaque_black);
+	box-shadow: 0 0 5px var(--popup_text);
 }
 .link-btn {
 	padding: 10px 20px;
-	color: var(--half_opaque_black);
+	color: var(--popup_text);
 	position: absolute;
 	top: 10px;
 	right: 10px;
 	font-size: 25px;
 	text-decoration: none;
 	transition: all 0.5s;
+	opacity: 0.5;
 }
 .link-btn:hover {
 	transform: scale(1.1);
@@ -313,7 +314,7 @@ h2 {
 	position: absolute;
 	bottom: 0;
 	padding: 30px 0 10px 20px;
-	color: rgba(0, 0, 0, 0.7);
+	color: var(--popup_text);
 	font-family: "Poppins", sans-serif;
 	font-size: 12px;
 	font-weight: 100;
@@ -330,6 +331,7 @@ h2 {
 	opacity: 0.5;
 	font-size: 30px;
 	cursor: pointer;
+	color: var(--popup_text);
 }
 .pre-btn {
 	left: 0px;

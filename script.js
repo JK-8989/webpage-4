@@ -33,7 +33,7 @@ const searchImages = () => {
 const makeImages = (data) => {
 	data.forEach((photo, index) => {
 		console.log(photo);
-
+//testing
     let img = document.createElement("img");
     let itemDiv = document.createElement("div");
     let h2 = document.createElement("h2");
@@ -60,7 +60,7 @@ const makeImages = (data) => {
 };
 
 const showPopup = (photo) => {
-	let popup = document.querySelector(".popup-bg");
+	const popup = document.querySelector(".popup-bg");
 	const image = document.querySelector(".large-img");
 	const closeBtn = document.querySelector(".close-btn");
 	const downloadBtn = document.querySelector(".link-btn");
