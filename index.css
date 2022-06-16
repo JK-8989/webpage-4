@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 :root {
-	--main_color: rgb(34, 34, 34);
+	--main_color: rgb(0, 0, 0);
 	--main_text: rgb(255, 255, 255);
 	--half_opaque_black: rgba(0, 0, 0, 0.5)
 }
@@ -27,6 +27,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	z-index: 0;
 }
 
 .logo {
@@ -34,6 +35,7 @@ body {
 	font-weight: 400;
 	color: var(--main_text);
 	text-transform: capitalize;
+	z-index: 2;
 }
 
 .sub-line {
@@ -102,18 +104,19 @@ form {
 }
 
 /* gallery */
+
 .header-section::before {
 	content: '';
 	width: 100vw;
-	height: 100px;
-	background: linear-gradient(to top, rgba(34,34,34,1), rgba(0,0,0,0));
+	height: 50px;
+	/* background: linear-gradient(to top, var(--main_color), rgba(0,0,0,0)); */
 	position: absolute;
 	bottom: 0;
 }
 .gallery {
 	width: 100vw;
 	height: auto;
-	padding: 40px 30px 40px 15px;
+	padding: 15px 30px 40px 15px;
 	columns: 5;
 	column-gap: 20px;
 	transition: all 0.5s;
