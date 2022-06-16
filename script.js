@@ -152,7 +152,7 @@ const showPopup = (photo) => {
   let popup = document.querySelector('.popup-bg');
   const image = document.querySelector('.large-img');
   const closeBtn = document.querySelector('.close-btn');
-  const downloadBtn = document.querySelector('.download-btn');
+  const downloadBtn = document.querySelector('.link-btn');
 
   const info = document.querySelector('.info');
 

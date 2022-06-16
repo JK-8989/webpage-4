@@ -224,9 +224,13 @@ h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: all 0.5s;
 	z-index: 2;
 	overflow: hidden;
+	opacity: 1;
+	transition: all 0.5s ease;
+}
+.gallery {
+	transition: all 0.5s;
 }
 .gallery::before {
 	content: "";
@@ -239,6 +243,7 @@ h2 {
 	left: 0;
 	right: 0;
 	z-index: 1;
+	transition: all 0.5s;
 }
 .popup-bg.hide {
 	display: none;
@@ -253,11 +258,11 @@ h2 {
 	left: 10px;
 	border: none;
 	cursor: pointer;
-	transition: all 0.5s;
 	font-size: 30px;
 	background: transparent;
 	color: var(--half_opaque_black);
 	padding: 10px;
+	transition: all 0.5s;
 }
 .close-btn:hover {
 	transform: scale(1.2);
@@ -267,10 +272,9 @@ h2 {
 	background: rgb(153, 0, 255, 0.5);
 	box-shadow: 0 0 5px var(--half_opaque_black);
 }
-.download-btn {
+.link-btn {
 	padding: 10px 20px;
 	color: var(--half_opaque_black);
-	border-radius: 10px;
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -278,7 +282,7 @@ h2 {
 	text-decoration: none;
 	transition: all 0.5s;
 }
-.download-btn:hover {
+.link-btn:hover {
 	transform: scale(1.1);
 }
 .large-img {
