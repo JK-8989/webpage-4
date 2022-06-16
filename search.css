@@ -1,8 +1,8 @@
 .search-container {
 	width: 80%;
 	margin: 0 auto;
-	height: 60px;
-	background: #222;
+	height: 80px;
+	background: var(--main_color);
 	padding: 30px 40px;
 	display: flex;
 	justify-content: center;
@@ -28,6 +28,7 @@
 	font-size: 36px;
 	padding: 4px 5px 0 0;
 	transition: all 0.5s;
+	user-select: none;
 }
 .home-icon .material-icons:hover {
 	transform: scale(1.1);

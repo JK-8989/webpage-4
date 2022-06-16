@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 :root {
 	--main_color: rgb(0, 0, 0);
 	--main_text: rgb(255, 255, 255);
@@ -12,7 +13,7 @@
 body {
 	background: var(--main_color);
 	overflow-x: hidden;
-}
+} 
 
 /* landing page */
 
@@ -108,8 +109,14 @@ form {
 .header-section::before {
 	content: '';
 	width: 100vw;
-	height: 50px;
-	/* background: linear-gradient(to top, var(--main_color), rgba(0,0,0,0)); */
+	height: 100%;
+	background: radial-gradient(
+		rgba(0,0,0,0) 2%,
+		rgba(0,0,0,0.1) 40%,
+		rgba(0,0,0,0.2) 60%,
+		rgba(0,0,0,0.3) 80%,
+		rgba(0,0,0,0.4) 100%
+	  );
 	position: absolute;
 	bottom: 0;
 }
