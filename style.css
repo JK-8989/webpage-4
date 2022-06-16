@@ -214,17 +214,16 @@ h2 {    /*Photographer name*/
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 20px;
-  height: 20px;
-  background: rgb(153, 0, 255);
   border: none;
-  border-radius: 50%;
   cursor: pointer;
   transition: all 0.5s;
+  font-size: 30px;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
 .close-btn:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .close-btn:active {
   transform: scale(1.2);
@@ -232,15 +231,18 @@ h2 {    /*Photographer name*/
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .download-btn {
-  text-transform: capitalize;
   padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   position: absolute;
   top: 10px;
   right: 10px;
-  color: #ddd;
+  font-size: 25px;
   text-decoration: none;
+  transition: all 0.5s;
+}
+.download-btn:hover {
+  transform: scale(1.1);
 }
 .large-img {
   height: 80%;
@@ -274,9 +276,6 @@ h2 {    /*Photographer name*/
   position: absolute;
   bottom: 0;
   padding: 30px 0 10px 20px;
-  /* background: linear-gradient(to top, rgba(0,0,0,0.6),
-                                      rgba(0,0,0,0)); */
-                                      
   color: rgba(0, 0, 0, 0.7);
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -284,32 +283,22 @@ h2 {    /*Photographer name*/
   z-index: 3;
 }
 
-
-
-/* .controls {
-  background: none;
-  border: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-} */
-
 .pre-btn, .next-btn {
   position: absolute;
-  padding: 8px;
+  padding: 4px 8px;
   transition: all 0.5s;
   opacity: 0.5;
-  font-size: 50px;
+  font-size: 30px;
+  cursor: pointer;
 }
 .pre-btn {
-  left: 10px;
+  left: 0px;
 }
 .next-btn {
-  right: 10px;
+  right:0px;
 }
 .pre-btn:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .next-btn:hover {

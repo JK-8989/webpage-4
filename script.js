@@ -112,9 +112,10 @@ const makeImages = (data) => {
     let a = document.createElement('a');
 
     const text = document.createTextNode(
-      photo.user.first_name + " " + photo.user.last_name
+      photo.user.name
     );
     img.src = photo.urls.regular;
+    img.alt = 'A image from Unsplash.com' // for screen reader
 
     gallery.appendChild(itemDiv);
     itemDiv.className = 'item';
@@ -146,61 +147,34 @@ const showPopup = (photo) => {
   downloadBtn.href = photo.links.html;
   image.src = photo.urls.regular;
 
-  info.innerHTML = `Photo by ${photo.user.first_name} ${photo.user.last_name}   |     
+  info.innerHTML = `Photo by ${photo.user.name}  |     
                     ${photo.user.location }   |   ${photo.exif.name}`
 
 
   closeBtn.addEventListener('click', ()=>{
     popup.classList.add('hide');
-    gallery.classList.add('hide');
+    gallery.classList.add('hide');    
   })
 
-    popup.addEventListener('click', ()=>{
-    popup.classList.add('hide');
-    gallery.classList.add('hide');
-  })
+  // hit bg to close
+  //   popup.addEventListener('click', ()=>{
+  //   popup.classList.add('hide');
+  //   gallery.classList.add('hide');   
+  // })
 
 }
 
 getImages();
 
+// pre & next button
 
+const preBtn = document.querySelector('.pre-btn');
+const nextBtn = document.querySelector('next-btn');
 
+preBtn.addEventListener('click', ()=>{
+  showPopup(allImages[current_image]);
+})
+nextBtn.addEventListener('click', ()=>{
+  showPopup(allImages[current_image]);
+})
 
-
-
-
-
-
-
-
-        // photo info
-
-        // const info = document.querySelector('.info');
-        // const info_text = document.createTextNode(
-      
-        //   `Photo by ${photo.user.first_name} ${photo.user.last_name}   |     
-        //             ${photo.user.location }   |   ${photo.exif.name}`
-        // );
-      
-        // info.appendChild(info_text);
-        //===============
-
-
-
-
-// const showPopup = (item) => {
-//   let popup = document.querySelector('.image-popup');
-//   const downloadBtn = document.querySelector('.download-btn');
-//   const closeBtn = document.querySelector('.close-btn');
-//   const image = document.querySelector('.large-img');
-
-//   popup.classList.remove('hide');
-//   downloadBtn.href = item.links.html;
-//   image.src = item.urls.regular;
-
-//   closeBtn.addEventListener('click', ()=>{
-//     popup.classList.add('hide');
-//   })
-//   showPopup()
-// }
