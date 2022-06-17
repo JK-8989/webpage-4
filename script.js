@@ -38,18 +38,16 @@ const makeImages = (data) => {
     let img = document.createElement("img");
     let itemDiv = document.createElement("div");
     let h2 = document.createElement("h2");
-    let a = document.createElement("a");
 
-    const text = document.createTextNode(photo.user.name);
+    const photographerName = document.createTextNode(photo.user.name);
     img.src = photo.urls.regular;
     img.alt = "An image from Unsplash.com"; 
 
     gallery.appendChild(itemDiv);
     itemDiv.className = "item";
-    itemDiv.appendChild(a);
-    a.appendChild(img);
-    a.appendChild(h2);
-    h2.appendChild(text);
+    itemDiv.appendChild(img);
+    itemDiv.appendChild(h2);
+    h2.appendChild(photographerName);
 
     // popup image
 
