@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="search.css">
 	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2ee8ce4aa8.js" crossorigin="anonymous"></script>
 	<title>Searchable Image Gallery</title>
 </head>
 <body>
@@ -20,11 +21,11 @@
 
 	<div class="popup-bg hide">
 		<div class="icons-wrapper">
-			<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-			<a href="#"><i class="fa-brands fa-twitter"></i></a>
-			<a href="#"><i class="fa-brands fa-instagram"></i></a>
-			<button class="close-btn"><ion-icon name="close-outline"></ion-icon></button>
-			<a href="#" target="_blank" class="link-btn"><ion-icon name="link-outline"></ion-icon></a>
+			<a href="#" class="link-btn" target="_blank" id="link"><ion-icon name="link"></ion-icon></a>
+			<a href="#" class="facebook-btn" target="_blank" ><i class="fa-brands fa-facebook-f"></i></a>
+			<a href="#" class="twitter-btn" target="_blank" ><i class="fa-brands fa-twitter"></i></a>
+			<a href="#" class="insta-btn" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
+			<a href="#" class="close-btn" target="_blank" id="close"><ion-icon name="close"></ion-icon></a>
 		</div>
 		<img src="" class="large-img" alt="">
 		<p class="info"></p>
@@ -38,8 +39,8 @@
 				<h2>photographer-name</h2>
 		</div> -->
 	</section>
-
-	<script src="script.js"></script>
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-</body>
-</html>
+	
+		<script src="script.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	</body>
+	</html>

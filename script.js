@@ -27,7 +27,7 @@ const searchImages = () => {
 			// console.log(data);
 			allImages = data.results;
 			displayImages(allImages);
-			// console.log(allImages);
+			console.log(allImages);
 		});
 };
 
@@ -45,7 +45,6 @@ const displayImages = (data) => {
 
     gallery.appendChild(itemDiv);
     itemDiv.className = "item";
-    // itemDiv.appendChild(a);
     itemDiv.appendChild(img);
     itemDiv.appendChild(h2);
     h2.appendChild(photographerName);
@@ -69,15 +68,12 @@ const showPopup = (photo) => {
 	const image = document.querySelector(".large-img");
 	const closeBtn = document.querySelector(".close-btn");
 	const downloadBtn = document.querySelector(".link-btn");
-
 	const info = document.querySelector(".info");
 
 	popup.classList.remove("hide");
 	gallery.classList.remove("hide");
 	downloadBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
-
-	console.log(photo.exif)
 	
 	closeBtn.addEventListener("click", () => {
 		popup.classList.add("hide");
@@ -91,41 +87,32 @@ const showPopup = (photo) => {
 		gallery.classList.add('hide');
 	})
 
-	if (photo.exif == 'false' || photo.exif == 'undefined' || photo.exif == 'null'){
+	
 		info.innerHTML =
-	photo.user.name +
-	'&nbsp &nbsp &nbsp' +
-	'|' +
-	'&nbsp &nbsp &nbsp' +
-	photo.user.location +
-	'&nbsp &nbsp &nbsp' +
-	'|' +
-	'&nbsp &nbsp &nbsp' +
-	photo.height + ' x ' + photo.width;
-	} else {
+			photo.user.name +
+			'&nbsp &nbsp &nbsp' +
+			'|' +
+			'&nbsp &nbsp &nbsp' +
+			photo.user.location +
+			'&nbsp &nbsp &nbsp' +
+			'|' +
+			'&nbsp &nbsp &nbsp' +
+			photo.height + ' x ' + photo.width;
+	
 		info.innerHTML =
-		photo.user.name +
-		'&nbsp &nbsp &nbsp' +
-		'|' +
-		'&nbsp &nbsp &nbsp' +
-		photo.user.location +
-		'&nbsp &nbsp &nbsp' +
-		'|' +
-		'&nbsp &nbsp &nbsp' +
-		photo.exif.name;
+			photo.user.name +
+			'&nbsp &nbsp &nbsp' +
+			'|' +
+			'&nbsp &nbsp &nbsp' +
+			photo.user.location +
+			'&nbsp &nbsp &nbsp' +
+			'|' +
+			'&nbsp &nbsp &nbsp' +
+			photo.exif.name;
 	}
-	// info.innerHTML =
-	// photo.user.name +
-	// '&nbsp &nbsp &nbsp' +
-	// '|' +
-	// '&nbsp &nbsp &nbsp' +
-	// photo.user.location +
-	// '&nbsp &nbsp &nbsp' +
-	// '|' +
-	// '&nbsp &nbsp &nbsp' +
-	// photo.exif.name;
+	
 
-};
+
 
 if (searchWords === "") {
 	getImages();
