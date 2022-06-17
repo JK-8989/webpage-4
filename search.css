@@ -18,14 +18,10 @@
 	padding: 20px;
 	text-transform: capitalize;
 }
-.large-img {
-	border: none;
-}
-
 .home-icon .material-icons {
 	color: rgba(221, 221, 221, 0.8);
 	font-size: 36px;
-	padding: 4px 5px 0 0;
+	padding: 4px 0 0 0;
 	transition: all 0.5s;
 	user-select: none;
 }
@@ -49,6 +45,4 @@
     width: 100%;
 	}
 }
-.large-img {
-	border: 1px solid var(--main_text);
-}
+

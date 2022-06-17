@@ -328,11 +328,11 @@ h2 {
 	right: -20px;
 }
 .pre-btn:hover {
-	transform: scale(1.2);
+	opacity: 0.8;
 }
 
 .next-btn:hover {
-	transform: scale(1.5);
+	opacity: 0.8;
 }
 
 /*============= */

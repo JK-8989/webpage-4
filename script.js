@@ -16,7 +16,7 @@ const getImages = () => {
 		.then((data) => {
 			console.log(data);
 			allImages = data;
-			makeImages(allImages);
+			displayImages(allImages);
 		});
 };
 
@@ -24,14 +24,14 @@ const searchImages = () => {
 	fetch(search_photo_url)
 		.then((res) => res.json())
 		.then((data) => {
-			console.log(data);
+			// console.log(data);
 			allImages = data.results;
-			makeImages(allImages);
-			console.log('all-images:' + allImages);
+			displayImages(allImages);
+			// console.log(allImages);
 		});
 };
 
-const makeImages = (data) => {
+const displayImages = (data) => {
 	data.forEach((photo, index) => {
 		console.log(photo);
 
@@ -45,6 +45,7 @@ const makeImages = (data) => {
 
     gallery.appendChild(itemDiv);
     itemDiv.className = "item";
+    // itemDiv.appendChild(a);
     itemDiv.appendChild(img);
     itemDiv.appendChild(h2);
     h2.appendChild(photographerName);
@@ -76,19 +77,8 @@ const showPopup = (photo) => {
 	downloadBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
 
-	// info.innerHTML = `${photo.user.name}    |    ${photo.user.location }   |   ${photo.height} x ${photo.width}`;
-
-	info.innerHTML =
-		photo.user.name +
-		'&nbsp &nbsp &nbsp &nbsp &nbsp' +
-		'|' +
-		'&nbsp &nbsp &nbsp &nbsp &nbsp' +
-		photo.user.location +
-		'&nbsp &nbsp &nbsp &nbsp &nbsp' +
-		'|' +
-		'&nbsp &nbsp &nbsp &nbsp &nbsp' +
-		photo.height + ' x ' + photo.width;
-
+	console.log(photo.exif)
+	
 	closeBtn.addEventListener("click", () => {
 		popup.classList.add("hide");
 		gallery.classList.add("hide");
@@ -100,6 +90,40 @@ const showPopup = (photo) => {
 		popup.classList.add('hide');
 		gallery.classList.add('hide');
 	})
+
+	if (photo.exif == 'false' || photo.exif == 'undefined' || photo.exif == 'null'){
+		info.innerHTML =
+	photo.user.name +
+	'&nbsp &nbsp &nbsp' +
+	'|' +
+	'&nbsp &nbsp &nbsp' +
+	photo.user.location +
+	'&nbsp &nbsp &nbsp' +
+	'|' +
+	'&nbsp &nbsp &nbsp' +
+	photo.height + ' x ' + photo.width;
+	} else {
+		info.innerHTML =
+		photo.user.name +
+		'&nbsp &nbsp &nbsp' +
+		'|' +
+		'&nbsp &nbsp &nbsp' +
+		photo.user.location +
+		'&nbsp &nbsp &nbsp' +
+		'|' +
+		'&nbsp &nbsp &nbsp' +
+		photo.exif.name;
+	}
+	// info.innerHTML =
+	// photo.user.name +
+	// '&nbsp &nbsp &nbsp' +
+	// '|' +
+	// '&nbsp &nbsp &nbsp' +
+	// photo.user.location +
+	// '&nbsp &nbsp &nbsp' +
+	// '|' +
+	// '&nbsp &nbsp &nbsp' +
+	// photo.exif.name;
 
 };
 
