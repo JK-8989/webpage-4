@@ -319,12 +319,13 @@ h2 {
 	font-size: 35px;
 	cursor: pointer;
 	color: var(--popup_text);
+	user-select: none;
 }
 .pre-btn {
-	left: -10px;
+	left: -20px;
 }
 .next-btn {
-	right: -10px;
+	right: -20px;
 }
 .pre-btn:hover {
 	transform: scale(1.2);
