@@ -78,9 +78,7 @@ const showPopup = (photo) => {
 	downloadBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
 
-	// info.innerHTML = `${photo.user.name} |
-	// 				${photo.user.location } | 
-	// 				${photo.height} x ${photo.width}`
+	// info.innerHTML = `${photo.user.name}    |    ${photo.user.location }   |   ${photo.height} x ${photo.width}`;
 
 	info.innerHTML =
 		photo.user.name +

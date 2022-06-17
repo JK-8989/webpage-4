@@ -48,3 +48,6 @@
     width: 100%;
 	}
 }
+.large-img {
+	border: 1px solid var(--main_text);
+}
