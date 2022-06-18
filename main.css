@@ -455,7 +455,7 @@ img[alt] { /* 'alt attribute' for all images*/
 	}
 }
 
-/* pop-up elements : arrow icons */
+/* pop-up elements : 'pre/next arrow icons' */
 
 .pre-btn,
 .next-btn {
@@ -463,7 +463,7 @@ img[alt] { /* 'alt attribute' for all images*/
 	z-index: 0;
 
 	font-size: 35px;
-	padding: 4px 8px;
+	padding: 6px 10px;
 	color: var(--popup_text);
 	opacity: 0;
 
@@ -483,10 +483,11 @@ img[alt] { /* 'alt attribute' for all images*/
 }
 .pre-btn.visible:hover,
 .next-btn.visible:hover {
-	opacity: 0.8;
+	opacity: 1;
 }
 
-/* pop-up elements : end-page icons*/
+
+/* pop-up elements : 'end-page' icons*/
 
 .first-page, 
 .last-page {
