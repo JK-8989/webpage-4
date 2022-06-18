@@ -49,6 +49,15 @@ const displayImages = (data) => {
     itemDiv.appendChild(h2);
     h2.appendChild(photographerName);
 
+	// social media links 
+	let twitter_btn = document.querySelector('.twitter-btn');
+	let instagram_btn = document.querySelector('.insta-btn');
+	let twitter_link = photo.user.social.twitter_username;
+	let instagram_link = photo.user.instagram_username;
+
+		twitter_btn.href = `https://twitter.com/${twitter_link}`;	
+		instagram_btn.href = `https://instagram.com/${instagram_link}`;
+
     // popup image
 
     img.addEventListener("click", () => {

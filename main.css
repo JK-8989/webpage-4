@@ -357,16 +357,16 @@ h2 { /*Photographer name*/
 	align-items: baseline;
 }
 .social-media-wrap .profile-photo-wrap { /*photographer's profile wrapper*/
-	width: 23px;
-	height: 23px;
+	width: 35px;
+	height: 35px;
 	background: rgb(109, 109, 109);
-	margin: 0 20px;
+	margin: 0 10px;
 	/* padding: 0 12px; */
 	
 	border-radius: 50%;
 
 	position: relative;
-	bottom: -5px;
+	bottom: -10px;
 
 	cursor: pointer;
 	transition: all 0.5s;
