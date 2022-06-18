@@ -356,28 +356,26 @@ h2 { /*Photographer name*/
     justify-content: center;
 	align-items: baseline;
 }
-.social-media-wrap .profile-photo-wrap { /*photographer's profile wrapper*/
-	width: 35px;
-	height: 35px;
+.profile-photo-wrap { /*photographer's profile wrapper*/
+	width: 38px;
+	height: 38px;
 	background: rgb(109, 109, 109);
 	margin: 0 10px;
-	/* padding: 0 12px; */
-	
 	border-radius: 50%;
 
 	position: relative;
-	bottom: -10px;
+	bottom: -11px;
 
 	cursor: pointer;
-	transition: all 0.5s;
-
 	overflow: hidden;
+	transition: all 0.5s;
 }
-.social-media-wrap .profile-photo-wrap #thumb-nail{ /* profile photo thumb nail*/
+.profile-photo-wrap #thumb-nail{ /* profile photo thumb nail*/
 	position: absolute;
-	left: 0;
 	width: 100%;
 
+	border-radius: 50%;
+	border: 1px solid var(--icons_color);
 	vertical-align: top;
 }
 .social-media-wrap a { /* social media icons*/
