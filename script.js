@@ -1,4 +1,3 @@
-// Unsplash Radom Photo API
 let searchWords = location.search.split("=").pop();
 
 const access_key = "ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20";
@@ -48,7 +47,7 @@ const displayImages = (data) => {
     gallery.appendChild(itemDiv);
     itemDiv.className = "item";
     itemDiv.appendChild(img);
-    itemDiv.appendChild(h2);
+    itemDiv.appendChild(h2); // photographer's name
     h2.appendChild(photographerName);
 
     // popup image
@@ -72,6 +71,13 @@ const displayImages = (data) => {
 		console.log(twitter_link);
 		console.log(instagram_link);
 
+	twitter_btn.addEventListener('click', ()=>{
+		twitter_btn,href = `twitter.com/${twitter_link}`
+	})
+	instagram_btn.addEventListener('click', ()=>{
+		twitter_btn,href = `instagram.com/${twitter_link}`
+	})
+
 	});
 };
 
@@ -86,56 +92,52 @@ const showPopup = (photo) => {
 	gallery.classList.remove("hide");
 	downloadBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
+
+	// click 'close btn' to close
 	
 	closeBtn.addEventListener("click", () => {
 		popup.classList.add("hide");
 		gallery.classList.add("hide");
 	});
 
+	// pop-up photo info :
+	// photographer's name | location | camera or size
+
+	info.innerHTML =
+	photo.user.name +
+	'&nbsp &nbsp &nbsp' +
+	'|' +
+	'&nbsp &nbsp &nbsp' +
+	photo.user.location +
+	'&nbsp &nbsp &nbsp' +
+	'|' +
+	'&nbsp &nbsp &nbsp' +
+	photo.height + ' x ' + photo.width;
+
+info.innerHTML =
+	photo.user.name +
+	'&nbsp &nbsp &nbsp' +
+	'|' +
+	'&nbsp &nbsp &nbsp' +
+	photo.user.location +
+	'&nbsp &nbsp &nbsp' +
+	'|' +
+	'&nbsp &nbsp &nbsp' +
+	photo.user.exif.name;
+
+
 	// thumbnail photo
 	let thumbnail = document.querySelector('#thumb-nail');
 	thumbnail.src = photo.user.profile_image.small;	
 	console.log(thumbnail.src);
 
-
-
-
-
-
-
-
-
-
-
 	
-	//hit image to close
+	//click image to close
 	image.addEventListener('click', ()=>{
 		popup.classList.add('hide');
 		gallery.classList.add('hide');
 	})
 
-	// photo info - photographer's name | location | camera or size
-		info.innerHTML =
-			photo.user.name +
-			'&nbsp &nbsp &nbsp' +
-			'|' +
-			'&nbsp &nbsp &nbsp' +
-			photo.user.location +
-			'&nbsp &nbsp &nbsp' +
-			'|' +
-			'&nbsp &nbsp &nbsp' +
-			photo.height + ' x ' + photo.width;
-	
-		info.innerHTML =
-			photo.user.name +
-			'&nbsp &nbsp &nbsp' +
-			'|' +
-			'&nbsp &nbsp &nbsp' +
-			photo.user.location +
-			'&nbsp &nbsp &nbsp' +
-			'|' +
-			'&nbsp &nbsp &nbsp' +
-			photo.exif.name;
 	}
 	
 

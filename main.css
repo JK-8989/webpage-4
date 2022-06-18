@@ -286,7 +286,7 @@ form {
 	position: relative;
 	overflow: hidden;
 	border-radius: 10px;
-	transition: all 0.5s ease;
+	transition: all 1s ease;
 	vertical-align: top;
 	object-fit: cover;
 	margin-bottom: 1em;
@@ -461,7 +461,7 @@ img[alt] { /* 'alt attribute' for all images*/
 	z-index: 0;
 
 	font-size: 35px;
-	padding: 4px 8px;
+	padding: 8px 12px;
 	color: var(--popup_text);
 	opacity: 0;
 
