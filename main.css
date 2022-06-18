@@ -357,10 +357,10 @@ h2 { /*Photographer name*/
 	align-items: baseline;
 }
 .social-media-wrap .profile-photo-wrap { /*photographer's profile wrapper*/
-	width: 23px;
-	height: 23px;
+	width: 30px;
+	height: 30px;
 	background: rgb(109, 109, 109);
-	margin: 0 20px;
+	margin: 0 10px;
 	/* padding: 0 12px; */
 	
 	border-radius: 50%;
@@ -484,7 +484,7 @@ img[alt] {
 }
 .pre-btn.visible:hover,
 .next-btn.visible:hover {
-	opacity: 0.8;
+	opacity: 1;
 }
 
 /* pop-up elements : end-page icons*/
