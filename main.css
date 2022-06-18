@@ -338,7 +338,7 @@ h2 { /*Photographer name*/
 	justify-content: center;
 	align-items: center;
 	z-index: 2;
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 .popup-bg.hide {
 	display: none;
