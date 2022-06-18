@@ -397,7 +397,10 @@ h2 { /*Photographer name*/
 	position: relative;
 	top: 3px;
 }
-img[alt] { /* 'alt attribute' for all images*/
+
+/* 'alt attribute' for all images*/
+
+img[alt] { 
 	color: var(--popup_text);
 	font-size: 10px;
 	letter-spacing: 2px;

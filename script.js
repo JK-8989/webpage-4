@@ -62,14 +62,14 @@ const displayImages = (data) => {
 		showPopup(photo);
 		});
 
-	// social media links
+	// social media links - 클릭을 하지 않아도 링크를 연결 시키기 (함수로 만들어 볼  것)
 	let twitter_btn = document.querySelector('.twitter-btn');
 	let instagram_btn = document.querySelector('.insta-btn');
 	let twitter_link = photo.user.social.twitter_username;
 	let instagram_link = photo.user.social.instagram_username;
 
 		console.log(twitter_link);
-		console.log(instagram_link);
+		console.log(instagram_link); 
 
 	twitter_btn.addEventListener('click', ()=>{
 		twitter_btn,href = `twitter.com/${twitter_link}`
@@ -85,12 +85,12 @@ const showPopup = (photo) => {
 	const popup = document.querySelector(".popup-bg");
 	const image = document.querySelector(".large-img");
 	const closeBtn = document.querySelector(".close-btn");
-	const downloadBtn = document.querySelector(".link-btn");
+	const linkBtn = document.querySelector(".link-btn");
 	const info = document.querySelector(".info");
 
 	popup.classList.remove("hide");
 	gallery.classList.remove("hide");
-	downloadBtn.href = photo.links.html;
+	linkBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
 
 	// click 'close btn' to close
@@ -99,6 +99,11 @@ const showPopup = (photo) => {
 		popup.classList.add("hide");
 		gallery.classList.add("hide");
 	});
+
+		// thumbnail photo
+		let thumbnail = document.querySelector('#thumb-nail');
+		thumbnail.src = photo.user.profile_image.small;	
+		console.log(thumbnail.src);
 
 	// pop-up photo info :
 	// photographer's name | location | camera or size
@@ -125,11 +130,6 @@ info.innerHTML =
 	'&nbsp &nbsp &nbsp' +
 	photo.user.exif.name;
 
-
-	// thumbnail photo
-	let thumbnail = document.querySelector('#thumb-nail');
-	thumbnail.src = photo.user.profile_image.small;	
-	console.log(thumbnail.src);
 
 	
 	//click image to close
