@@ -50,6 +50,15 @@ const displayImages = (data) => {
     itemDiv.appendChild(h2); // photographer's name
     h2.appendChild(photographerName);
 
+	// social media links 
+	let twitter_btn = document.querySelector('.twitter-btn');
+	let instagram_btn = document.querySelector('.insta-btn');
+	let twitter_link = photo.user.social.twitter_username;
+	let instagram_link = photo.user.instagram_username;
+
+		twitter_btn.href = `https://twitter.com/${twitter_link}`;	
+		instagram_btn.href = `https://instagram.com/${instagram_link}`;
+
     // popup image
 
     img.addEventListener("click", () => {
@@ -61,22 +70,6 @@ const displayImages = (data) => {
 		current_image = index;
 		showPopup(photo);
 		});
-
-	// social media links - 클릭을 하지 않아도 링크를 연결 시키기 (함수로 만들어 볼  것)
-	let twitter_btn = document.querySelector('.twitter-btn');
-	let instagram_btn = document.querySelector('.insta-btn');
-	let twitter_link = photo.user.social.twitter_username;
-	let instagram_link = photo.user.social.instagram_username;
-
-		console.log(twitter_link);
-		console.log(instagram_link); 
-
-	twitter_btn.addEventListener('click', ()=>{
-		twitter_btn,href = `twitter.com/${twitter_link}`
-	})
-	instagram_btn.addEventListener('click', ()=>{
-		twitter_btn,href = `instagram.com/${twitter_link}`
-	})
 
 	});
 };
@@ -128,7 +121,7 @@ info.innerHTML =
 	'&nbsp &nbsp &nbsp' +
 	'|' +
 	'&nbsp &nbsp &nbsp' +
-	photo.user.exif.name;
+	photo.exif.name; // phto
 
 
 	
@@ -140,8 +133,6 @@ info.innerHTML =
 
 	}
 	
-
-
 
 if (searchWords === "") {
 	getImages();
