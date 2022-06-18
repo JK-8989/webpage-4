@@ -87,7 +87,12 @@ const showPopup = (photo) => {
 		gallery.classList.add('hide');
 	})
 
-	
+		// thumbnail photo
+		let thumbnail = document.querySelector('#thumb-nail');
+		thumbnail.src = photo.user.profile_image.small;	
+		console.log(thumbnail.src);
+
+		
 		info.innerHTML =
 			photo.user.name +
 			'&nbsp &nbsp &nbsp' +
