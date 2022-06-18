@@ -377,6 +377,8 @@ h2 { /*Photographer name*/
 	position: absolute;
 	left: 0;
 	width: 100%;
+
+	vertical-align: top;
 }
 .social-media-wrap a { /* social media icons*/
     color: var(--icons_color);
