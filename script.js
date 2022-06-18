@@ -2,19 +2,20 @@
 let searchWords = location.search.split("=").pop();
 
 const access_key = "ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20";
-const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=15`;
-const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=10`;
+const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=5`;
+const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=5`;
 
 const gallery = document.querySelector(".gallery");
 
 let allImages;
 let current_image;
+let data_2;
 
 const getImages = () => {
 	fetch(random_photo_url)
 		.then((res) => res.json())
 		.then((data) => {
-			console.log(data);
+			// console.log(data);
 			allImages = data;
 			displayImages(allImages);
 		});
@@ -24,12 +25,13 @@ const searchImages = () => {
 	fetch(search_photo_url)
 		.then((res) => res.json())
 		.then((data) => {
-			// console.log(data);
+			console.log(data);
 			allImages = data.results;
 			displayImages(allImages);
 			console.log(allImages);
 		});
 };
+
 
 const displayImages = (data) => {
 	data.forEach((photo, index) => {
@@ -60,6 +62,16 @@ const displayImages = (data) => {
 		current_image = index;
 		showPopup(photo);
 		});
+
+	// social media links
+	let twitter_btn = document.querySelector('.twitter-btn');
+	let instagram_btn = document.querySelector('.insta-btn');
+	let twitter_link = photo.user.social.twitter_username;
+	let instagram_link = photo.user.social.instagram_username;
+
+		console.log(twitter_link);
+		console.log(instagram_link);
+
 	});
 };
 
@@ -80,6 +92,21 @@ const showPopup = (photo) => {
 		gallery.classList.add("hide");
 	});
 
+	// thumbnail photo
+	let thumbnail = document.querySelector('#thumb-nail');
+	thumbnail.src = photo.user.profile_image.small;	
+	console.log(thumbnail.src);
+
+
+
+
+
+
+
+
+
+
+
 	
 	//hit image to close
 	image.addEventListener('click', ()=>{
@@ -87,7 +114,7 @@ const showPopup = (photo) => {
 		gallery.classList.add('hide');
 	})
 
-	
+	// photo info - photographer's name | location | camera or size
 		info.innerHTML =
 			photo.user.name +
 			'&nbsp &nbsp &nbsp' +
@@ -137,3 +164,5 @@ nextBtn.addEventListener("click", () => {
 		showPopup(allImages[current_image]);
 	}
 });
+
+
