@@ -229,7 +229,7 @@ h2 {
 
 /* Image pop-up*/
 
-.popup-bg {
+.popup-bg { /*light box*/
 	position: fixed;
 	top: 50%;
 	left: 50%;
