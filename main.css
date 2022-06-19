@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light");
 
 :root {
@@ -552,19 +552,18 @@ footer span {
 	padding: 20px;
 	letter-spacing: 2px;
 }
-footer a {
+footer span > a {
 	text-decoration: none;
+	color: rgba(255,255,255,0.3);
 }
 footer q {
-	font-size: 38px;
+	font-size: 3em;
 	padding: 30px 10px;
 	font-family: 'Shadows Into Light', cursive;
 	color: rgba(255,255,255,0.5);
 	letter-spacing: 1px;
 }
-/* footer div span {
-	padding: 30px;
-} */
+
 
 
 

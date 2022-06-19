@@ -116,35 +116,38 @@ const showPopup = (photo) => {
 	thumbnail.src = photo.user.profile_image.small;	
 	console.log(thumbnail.src);
 
-	// info texts
-	info.innerHTML =
-		photo.user.name +
-		'&nbsp &nbsp &nbsp' +
-		'|' +
-		'&nbsp &nbsp &nbsp' +
-		photo.user.location +
-		'&nbsp &nbsp &nbsp' +
-		'|' +
-		'&nbsp &nbsp &nbsp' +
-		photo.height + ' x ' + photo.width;
-
-	let camera = photo.exif.name;
-	console.log(camera);
-	if (camera == null){
-		info.innerHTML =
-		photo.user.name +
-		'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		photo.user.location +
-		'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		'N/A'; // show N/A when no camera info
-	} else {
-		info.innerHTML =
-		photo.user.name +
-		'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		photo.user.location +
-		'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		photo.exif.name;
+	// info of photos
+		const showInfo = ()=>{
+			info.innerHTML =
+			photo.user.name +
+			'&nbsp &nbsp &nbsp' +
+			'|' +
+			'&nbsp &nbsp &nbsp' +
+			photo.user.location +
+			'&nbsp &nbsp &nbsp' +
+			'|' +
+			'&nbsp &nbsp &nbsp' +
+			photo.height + ' x ' + photo.width;
 		}
+		showInfo()
+
+		let camera = photo.exif.name;
+		console.log(camera);
+		if (camera == null){
+			info.innerHTML =
+			photo.user.name +
+			'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+			photo.user.location +
+			'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+			'N/A'; // show N/A when no camera info
+		} else {
+			info.innerHTML =
+			photo.user.name +
+			'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+			photo.user.location +
+			'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+			photo.exif.name;
+			}
 		
 	}
 	
