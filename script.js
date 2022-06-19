@@ -1,3 +1,4 @@
+// Unsplash Radom Photo API
 let searchWords = location.search.split("=").pop();
 
 const access_key = "ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20";
@@ -45,17 +46,8 @@ const displayImages = (data) => {
     gallery.appendChild(itemDiv);
     itemDiv.className = "item";
     itemDiv.appendChild(img);
-    itemDiv.appendChild(h2); // photographer's name
+    itemDiv.appendChild(h2);
     h2.appendChild(photographerName);
-
-	// social media links 
-	let twitter_btn = document.querySelector('.twitter-btn');
-	let instagram_btn = document.querySelector('.insta-btn');
-	let twitter_link = photo.user.social.twitter_username;
-	let instagram_link = photo.user.instagram_username;
-
-		twitter_btn.href = `https://twitter.com/${twitter_link}`;	
-		instagram_btn.href = `https://instagram.com/${instagram_link}`;
 
     // popup image
     img.addEventListener("click", () => {
@@ -67,10 +59,6 @@ const displayImages = (data) => {
 		current_image = index;
 		showPopup(photo);
 		});
-<<<<<<< HEAD
-
-=======
->>>>>>> 5389d15e53ee248bcd476c4d68f5e89f344f3928
 	});
 };
 
@@ -78,52 +66,14 @@ const showPopup = (photo) => {
 	const popup = document.querySelector(".popup-bg");
 	const image = document.querySelector(".large-img");
 	const closeBtn = document.querySelector(".close-btn");
-	const linkBtn = document.querySelector(".link-btn");
+	const downloadBtn = document.querySelector(".link-btn");
 	const info = document.querySelector(".info");
 
 	popup.classList.remove("hide");
 	gallery.classList.remove("hide");
-	linkBtn.href = photo.links.html;
+	downloadBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
-
-	// click 'close btn' to close
 	
-<<<<<<< HEAD
-	closeBtn.addEventListener("click", () => {
-		popup.classList.add("hide");
-		gallery.classList.add("hide");
-	});
-
-		// thumbnail photo
-		let thumbnail = document.querySelector('#thumb-nail');
-		thumbnail.src = photo.user.profile_image.small;	
-		console.log(thumbnail.src);
-
-	// pop-up photo info :
-	// photographer's name | location | camera or size
-
-	info.innerHTML =
-	photo.user.name +
-	'&nbsp &nbsp &nbsp' +
-	'|' +
-	'&nbsp &nbsp &nbsp' +
-	photo.user.location +
-	'&nbsp &nbsp &nbsp' +
-	'|' +
-	'&nbsp &nbsp &nbsp' +
-	photo.height + ' x ' + photo.width;
-
-info.innerHTML =
-	photo.user.name +
-	'&nbsp &nbsp &nbsp' +
-	'|' +
-	'&nbsp &nbsp &nbsp' +
-	photo.user.location +
-	'&nbsp &nbsp &nbsp' +
-	'|' +
-	'&nbsp &nbsp &nbsp' +
-	photo.exif.name; // phto
-=======
 
 //-----------------
 	// social media links 
@@ -154,7 +104,6 @@ info.innerHTML =
 //-----------------
 
 
->>>>>>> 5389d15e53ee248bcd476c4d68f5e89f344f3928
 
 	closeBtn.addEventListener("click", () => {
 		popup.classList.add("hide");
@@ -162,14 +111,12 @@ info.innerHTML =
 	});
 
 	
-	//click image to close
+	//hit image to close
 	image.addEventListener('click', ()=>{
 		popup.classList.add('hide');
 		gallery.classList.add('hide');
 	})
 
-<<<<<<< HEAD
-=======
 		// thumbnail photo
 		let thumbnail = document.querySelector('#thumb-nail');
 		thumbnail.src = photo.user.profile_image.small;	
@@ -197,9 +144,10 @@ info.innerHTML =
 			'|' +
 			'&nbsp &nbsp &nbsp' +
 			photo.exif.name;
->>>>>>> 5389d15e53ee248bcd476c4d68f5e89f344f3928
 	}
 	
+
+
 
 if (searchWords === "") {
 	getImages();
