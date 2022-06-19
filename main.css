@@ -78,6 +78,7 @@ nav ul #read-me {
 	letter-spacing: 2px;
 
 	animation: animate 2s ease-out 3s;
+	cursor: pointer;
 }
 nav ul #link-ref {
 	margin-right: 15px;
@@ -125,7 +126,7 @@ nav ul #link-ref {
 	color: var(--main_text);
 	text-transform: capitalize;
 	user-select: none;
-	text-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	text-shadow: rgba(0, 0, 0, 0.2) 1.95px 1.95px 2.6px;
 }
 
 .sub-line {
@@ -138,7 +139,7 @@ nav ul #link-ref {
 	text-transform: capitalize;
 	word-spacing: 2px;
 	letter-spacing: 2px;
-	text-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	text-shadow: rgba(0, 0, 0, 0.2) 1.95px 1.95px 2.6px;
 
 	position: relative;
 
@@ -155,7 +156,8 @@ nav ul #link-ref {
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	transform: translateX(-50%);	
+	transform: translateX(-50%);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .sub-line::before {
@@ -170,6 +172,8 @@ nav ul #link-ref {
 	transform: translateX(-50%);
 	
 	border-radius: 50%;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	z-index: 1;
 }
 
 .search-box {
@@ -186,6 +190,7 @@ nav ul #link-ref {
 	outline: none;
 
 	text-transform: capitalize;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .search-box:focus {
 	border: 2px solid rgba(0, 0, 0, 0.6);
