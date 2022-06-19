@@ -8,13 +8,12 @@ const gallery = document.querySelector(".gallery");
 
 let allImages;
 let current_image;
-let data_2;
 
 const getImages = () => {
 	fetch(random_photo_url)
 		.then((res) => res.json())
 		.then((data) => {
-			// console.log(data);
+			console.log(data);
 			allImages = data;
 			displayImages(allImages);
 		});
@@ -24,13 +23,12 @@ const searchImages = () => {
 	fetch(search_photo_url)
 		.then((res) => res.json())
 		.then((data) => {
-			console.log(data);
+			// console.log(data);
 			allImages = data.results;
 			displayImages(allImages);
 			console.log(allImages);
 		});
 };
-
 
 const displayImages = (data) => {
 	data.forEach((photo, index) => {
@@ -60,7 +58,6 @@ const displayImages = (data) => {
 		instagram_btn.href = `https://instagram.com/${instagram_link}`;
 
     // popup image
-
     img.addEventListener("click", () => {
 		current_image = index;
 		showPopup(photo);
@@ -70,7 +67,10 @@ const displayImages = (data) => {
 		current_image = index;
 		showPopup(photo);
 		});
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5389d15e53ee248bcd476c4d68f5e89f344f3928
 	});
 };
 
@@ -88,6 +88,7 @@ const showPopup = (photo) => {
 
 	// click 'close btn' to close
 	
+<<<<<<< HEAD
 	closeBtn.addEventListener("click", () => {
 		popup.classList.add("hide");
 		gallery.classList.add("hide");
@@ -122,7 +123,43 @@ info.innerHTML =
 	'|' +
 	'&nbsp &nbsp &nbsp' +
 	photo.exif.name; // phto
+=======
 
+//-----------------
+	// social media links 
+	let twitter_btn = document.querySelector('.twitter-btn');
+	let instagram_btn = document.querySelector('.insta-btn');
+	let twitter_link = photo.user.social.twitter_username;
+	let instagram_link = photo.user.instagram_username;
+
+	console.log(twitter_link);
+	console.log(instagram_link);
+
+	// only showing last user's info - need to fix 
+	// 각각의 이미지에 맞는 히이퍼링크를 넣어줄 것
+	twitter_btn.href = `https://twitter.com/${twitter_link}`;	
+	instagram_btn.href = `https://instagram.com/${instagram_link}`;
+
+	// to remove social media icon when 'null'
+	if (twitter_link  == null){
+		twitter_btn.style.display = 'none';
+	} else {
+		twitter_btn.style.display = 'inline';
+	}
+	if (instagram_link  == null){
+		instagram_btn.style.display = 'none';
+	} else {
+		instagram_btn.style.display = 'inline';
+	}
+//-----------------
+
+
+>>>>>>> 5389d15e53ee248bcd476c4d68f5e89f344f3928
+
+	closeBtn.addEventListener("click", () => {
+		popup.classList.add("hide");
+		gallery.classList.add("hide");
+	});
 
 	
 	//click image to close
@@ -131,6 +168,36 @@ info.innerHTML =
 		gallery.classList.add('hide');
 	})
 
+<<<<<<< HEAD
+=======
+		// thumbnail photo
+		let thumbnail = document.querySelector('#thumb-nail');
+		thumbnail.src = photo.user.profile_image.small;	
+		console.log(thumbnail.src);
+
+		
+		info.innerHTML =
+			photo.user.name +
+			'&nbsp &nbsp &nbsp' +
+			'|' +
+			'&nbsp &nbsp &nbsp' +
+			photo.user.location +
+			'&nbsp &nbsp &nbsp' +
+			'|' +
+			'&nbsp &nbsp &nbsp' +
+			photo.height + ' x ' + photo.width;
+	
+		info.innerHTML =
+			photo.user.name +
+			'&nbsp &nbsp &nbsp' +
+			'|' +
+			'&nbsp &nbsp &nbsp' +
+			photo.user.location +
+			'&nbsp &nbsp &nbsp' +
+			'|' +
+			'&nbsp &nbsp &nbsp' +
+			photo.exif.name;
+>>>>>>> 5389d15e53ee248bcd476c4d68f5e89f344f3928
 	}
 	
 
@@ -157,5 +224,3 @@ nextBtn.addEventListener("click", () => {
 		showPopup(allImages[current_image]);
 	}
 });
-
-

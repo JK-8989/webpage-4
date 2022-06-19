@@ -327,7 +327,7 @@ h2 { /*Photographer name*/
 /* pop-up elements*/
 
 .popup-bg {
-	position: absolute;
+	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -338,7 +338,7 @@ h2 { /*Photographer name*/
 	justify-content: center;
 	align-items: center;
 	z-index: 2;
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 .popup-bg.hide {
 	display: none;
@@ -356,6 +356,7 @@ h2 { /*Photographer name*/
     justify-content: center;
 	align-items: baseline;
 }
+<<<<<<< HEAD
 .social-media-wrap .profile-photo-wrap { /*photographer's profile wrapper*/
 	width: 30px;
 	height: 30px;
@@ -363,20 +364,33 @@ h2 { /*Photographer name*/
 	margin: 0 10px;
 	/* padding: 0 12px; */
 	
+=======
+/*profile thumb nail bg (wrapper)*/
+
+.profile-photo-wrap { 
+	width: 40px;
+	height: 40px;
+	background: rgb(109, 109, 109);
+	margin: 0 10px;
+>>>>>>> 5389d15e53ee248bcd476c4d68f5e89f344f3928
 	border-radius: 50%;
 
 	position: relative;
-	bottom: -5px;
+	bottom: -11px;
 
 	cursor: pointer;
-	transition: all 0.5s;
-
 	overflow: hidden;
+	transition: all 0.5s;
 }
-.social-media-wrap .profile-photo-wrap #thumb-nail{ /* profile photo thumb nail*/
+/* profile thumb nail (photo)*/
+
+.profile-photo-wrap #thumb-nail{ 
 	position: absolute;
-	left: 0;
 	width: 100%;
+
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, 0.7);
+	vertical-align: top;
 }
 .social-media-wrap a { /* social media icons*/
     color: var(--icons_color);
@@ -456,7 +470,7 @@ img[alt] {
 	}
 }
 
-/* pop-up elements : arrow icons */
+/* pop-up elements : 'pre/next arrow icons' */
 
 .pre-btn,
 .next-btn {
@@ -464,7 +478,11 @@ img[alt] {
 	z-index: 0;
 
 	font-size: 35px;
+<<<<<<< HEAD
 	padding: 8px 12px;
+=======
+	padding: 6px 10px;
+>>>>>>> 5389d15e53ee248bcd476c4d68f5e89f344f3928
 	color: var(--popup_text);
 	opacity: 0;
 
@@ -487,7 +505,8 @@ img[alt] {
 	opacity: 1;
 }
 
-/* pop-up elements : end-page icons*/
+
+/* pop-up elements : 'end-page' icons*/
 
 .first-page, 
 .last-page {
