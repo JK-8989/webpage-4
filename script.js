@@ -74,8 +74,6 @@ const showPopup = (photo) => {
 	downloadBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
 	
-
-//-----------------
 	// social media links 
 	let twitter_btn = document.querySelector('.twitter-btn');
 	let instagram_btn = document.querySelector('.insta-btn');
@@ -85,8 +83,6 @@ const showPopup = (photo) => {
 	console.log(twitter_link);
 	console.log(instagram_link);
 
-	// only showing last user's info - need to fix 
-	// 각각의 이미지에 맞는 히이퍼링크를 넣어줄 것
 	twitter_btn.href = `https://twitter.com/${twitter_link}`;	
 	instagram_btn.href = `https://instagram.com/${instagram_link}`;
 
@@ -101,8 +97,8 @@ const showPopup = (photo) => {
 	} else {
 		instagram_btn.style.display = 'inline';
 	}
-//-----------------
 
+	// close btn
 	closeBtn.addEventListener("click", () => {
 		popup.classList.add("hide");
 		gallery.classList.add("hide");
@@ -121,7 +117,6 @@ const showPopup = (photo) => {
 	console.log(thumbnail.src);
 
 	// info texts
-	
 	info.innerHTML =
 		photo.user.name +
 		'&nbsp &nbsp &nbsp' +
@@ -138,24 +133,16 @@ const showPopup = (photo) => {
 	if (camera == null){
 		info.innerHTML =
 		photo.user.name +
-		'&nbsp &nbsp &nbsp' +
-		'|' +
-		'&nbsp &nbsp &nbsp' +
+		'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
 		photo.user.location +
-		'&nbsp &nbsp &nbsp' +
-		'|' +
-		'&nbsp &nbsp &nbsp' +
-		'N/A';
+		'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+		'N/A'; // show N/A when no camera info
 	} else {
 		info.innerHTML =
 		photo.user.name +
-		'&nbsp &nbsp &nbsp' +
-		'|' +
-		'&nbsp &nbsp &nbsp' +
+		'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
 		photo.user.location +
-		'&nbsp &nbsp &nbsp' +
-		'|' +
-		'&nbsp &nbsp &nbsp' +
+		'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
 		photo.exif.name;
 		}
 		

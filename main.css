@@ -157,7 +157,8 @@ nav ul #link-ref {
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, 
+				rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .sub-line::before {
@@ -172,7 +173,8 @@ nav ul #link-ref {
 	transform: translateX(-50%);
 	
 	border-radius: 50%;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, 
+				rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 	z-index: 1;
 }
 
@@ -190,7 +192,8 @@ nav ul #link-ref {
 	outline: none;
 
 	text-transform: capitalize;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, 
+				rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .search-box:focus {
 	border: 2px solid rgba(0, 0, 0, 0.6);
@@ -309,7 +312,8 @@ h2 { /*Photographer name*/
 	width: 100%;
 	padding: 40px 20px 15px 20px;
 	position: absolute;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.6), 
+										rgba(0, 0, 0, 0));
 	color: rgba(255, 255, 255, 0.8);
 	bottom: 0;
 	font-size: 13px;
