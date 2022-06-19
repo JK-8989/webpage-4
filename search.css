@@ -20,6 +20,10 @@
 
 	padding: 20px;
 	text-transform: capitalize;
+	box-sizing: border-box;
+}
+.search-input:focus {
+	border: 2px solid rgba(0, 0, 0, 0.3);
 }
 .home-icon .material-icons {
 	font-size: 36px;

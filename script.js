@@ -103,8 +103,6 @@ const showPopup = (photo) => {
 	}
 //-----------------
 
-
-
 	closeBtn.addEventListener("click", () => {
 		popup.classList.add("hide");
 		gallery.classList.add("hide");
@@ -117,38 +115,52 @@ const showPopup = (photo) => {
 		gallery.classList.add('hide');
 	})
 
-		// thumbnail photo
-		let thumbnail = document.querySelector('#thumb-nail');
-		thumbnail.src = photo.user.profile_image.small;	
-		console.log(thumbnail.src);
+	// thumbnail photo
+	let thumbnail = document.querySelector('#thumb-nail');
+	thumbnail.src = photo.user.profile_image.small;	
+	console.log(thumbnail.src);
 
-		
-		info.innerHTML =
-			photo.user.name +
-			'&nbsp &nbsp &nbsp' +
-			'|' +
-			'&nbsp &nbsp &nbsp' +
-			photo.user.location +
-			'&nbsp &nbsp &nbsp' +
-			'|' +
-			'&nbsp &nbsp &nbsp' +
-			photo.height + ' x ' + photo.width;
+	// info texts
 	
+	info.innerHTML =
+		photo.user.name +
+		'&nbsp &nbsp &nbsp' +
+		'|' +
+		'&nbsp &nbsp &nbsp' +
+		photo.user.location +
+		'&nbsp &nbsp &nbsp' +
+		'|' +
+		'&nbsp &nbsp &nbsp' +
+		photo.height + ' x ' + photo.width;
+
+	let camera = photo.exif.name;
+	console.log(camera);
+	if (camera == null){
 		info.innerHTML =
-			photo.user.name +
-			'&nbsp &nbsp &nbsp' +
-			'|' +
-			'&nbsp &nbsp &nbsp' +
-			photo.user.location +
-			'&nbsp &nbsp &nbsp' +
-			'|' +
-			'&nbsp &nbsp &nbsp' +
-			photo.exif.name;
+		photo.user.name +
+		'&nbsp &nbsp &nbsp' +
+		'|' +
+		'&nbsp &nbsp &nbsp' +
+		photo.user.location +
+		'&nbsp &nbsp &nbsp' +
+		'|' +
+		'&nbsp &nbsp &nbsp' +
+		'N/A';
+	} else {
+		info.innerHTML =
+		photo.user.name +
+		'&nbsp &nbsp &nbsp' +
+		'|' +
+		'&nbsp &nbsp &nbsp' +
+		photo.user.location +
+		'&nbsp &nbsp &nbsp' +
+		'|' +
+		'&nbsp &nbsp &nbsp' +
+		photo.exif.name;
+		}
+		
 	}
 	
-
-
-
 if (searchWords === "") {
 	getImages();
 } else {

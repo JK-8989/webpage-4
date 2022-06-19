@@ -98,12 +98,12 @@ nav ul #link-ref {
 .header-section {
 	position: relative;
 	width: 100vw;
-	height: 70vh;
+	height: 90vh;
 	z-index: 0;
 
 	text-align: center;
 
-	background-image: url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1574&q=80");
+	background-image: url("https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1203&q=80");
 	background-size: cover;
 	background-position: top;
 
@@ -181,12 +181,8 @@ nav ul #link-ref {
 
 	text-transform: capitalize;
 }
-.search-btn:hover {
-	transform: scale(1.01);
-}
-.search-box {
-	display: block;
-	width: 80vw;
+.search-box:focus {
+	border: 2px solid rgba(0, 0, 0, 0.6);
 }
 input::placeholder {
 	letter-spacing: 1px;
@@ -379,7 +375,7 @@ h2 { /*Photographer name*/
 	width: 100%;
 
 	border-radius: 50%;
-	border: 2px solid rgba(255, 255, 255, 0.7);
+	border: 2px solid rgba(255, 255, 255, 0.6);
 	vertical-align: top;
 }
 .social-media-wrap a { /* social media icons*/
