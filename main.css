@@ -262,7 +262,7 @@ form {
     font-size: 15px;
 	}
 	.logo {
-    font-size: 65px;
+    font-size: 75px;
 	}
 	#search-icon {
     right: 45px;
@@ -538,7 +538,8 @@ img[alt] {
 /* footer */
 footer {
 	width: 100vw;
-	height: 500px;
+	min-height: 700px;
+	height: auto;
 	display: flex;
 	flex-direction:column;
 	justify-content:flex-end;
@@ -551,18 +552,54 @@ footer span {
 	color: rgba(255,255,255,0.3);
 	padding: 20px;
 	letter-spacing: 2px;
+	text-transform: capitalize;
 }
 footer span > a {
 	text-decoration: none;
 	color: rgba(255,255,255,0.3);
 }
 footer q {
-	font-size: 3em;
-	padding: 30px 10px;
+	font-size: 50px;
+	padding: 60px 10px;
 	font-family: 'Shadows Into Light', cursive;
 	color: rgba(255,255,255,0.5);
-	letter-spacing: 1px;
+	letter-spacing: 2px;
+	text-align: center;
 }
+/* 
+footer span:nth-child(odd){
+	padding-right: 0;
+	margin-right: 0;
+
+	position: relative;
+	left: 0;
+	bottom: -5px;
+}
+footer span:nth-child(even){
+	padding-left: 0;
+	margin-left: 0;
+}
+@media (max-width: 780px) {
+	footer q {
+		text-align: center;
+		margin-right: 20px;
+		padding: 100px 50px;
+	}
+	footer .credits {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	footer span:nth-child(even){
+		padding: 10px;
+	}
+	footer span:nth-child(odd){
+		padding: 10px;
+		position: relative;
+		right: 0px;
+		bottom: 5px;
+	}
+} */
 
 
 

@@ -118,6 +118,7 @@ const showPopup = (photo) => {
 
 	// info of photos
 		const showInfo = ()=>{
+			
 			info.innerHTML =
 			photo.user.name +
 			'&nbsp &nbsp &nbsp' +
@@ -127,27 +128,47 @@ const showPopup = (photo) => {
 			'&nbsp &nbsp &nbsp' +
 			'|' +
 			'&nbsp &nbsp &nbsp' +
+			// photo.exif.name;
 			photo.height + ' x ' + photo.width;
+
+
+			let camera = photo.exif.name;
+			console.log(camera);
+			if (camera == null){
+				info.innerHTML =
+				photo.user.name +
+				'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+				photo.user.location +
+				'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+				'N/A'; // show N/A when no camera info
+			} else {
+				info.innerHTML =
+				photo.user.name +
+				'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+				photo.user.location +
+				'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+				photo.exif.name;
+				}
 		}
 		showInfo()
 
-		let camera = photo.exif.name;
-		console.log(camera);
-		if (camera == null){
-			info.innerHTML =
-			photo.user.name +
-			'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-			photo.user.location +
-			'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-			'N/A'; // show N/A when no camera info
-		} else {
-			info.innerHTML =
-			photo.user.name +
-			'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-			photo.user.location +
-			'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-			photo.exif.name;
-			}
+		// let camera = photo.exif.name;
+		// console.log(camera);
+		// if (camera == null){
+		// 	info.innerHTML =
+		// 	photo.user.name +
+		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+		// 	photo.user.location +
+		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+		// 	'N/A'; // show N/A when no camera info
+		// } else {
+		// 	info.innerHTML =
+		// 	photo.user.name +
+		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+		// 	photo.user.location +
+		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+		// 	photo.exif.name;
+		// 	}
 		
 	}
 	
