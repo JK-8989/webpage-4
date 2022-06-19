@@ -378,6 +378,9 @@ h2 { /*Photographer name*/
 	border: 2px solid rgba(255, 255, 255, 0.6);
 	vertical-align: top;
 }
+.profile-photo-wrap #thumb-nail {
+	cursor: default;
+}
 .social-media-wrap a { /* social media icons*/
     color: var(--icons_color);
     font-size: 18px;
@@ -387,6 +390,7 @@ h2 { /*Photographer name*/
 
 	cursor: pointer;
 	transition: all 0.5s;
+
 }
 .social-media-wrap a:hover {
 	opacity: 1;
@@ -397,7 +401,13 @@ h2 { /*Photographer name*/
 	position: relative;
 	top: 3px;
 }
-img[alt] { /* 'alt attribute' for all images*/
+ion-icon:before { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+img[alt] {
 	color: var(--popup_text);
 	font-size: 10px;
 	letter-spacing: 2px;
