@@ -49,17 +49,7 @@ const displayImages = (data) => {
     itemDiv.appendChild(h2);
     h2.appendChild(photographerName);
 
-	// social media links 
-	let twitter_btn = document.querySelector('.twitter-btn');
-	let instagram_btn = document.querySelector('.insta-btn');
-	let twitter_link = photo.user.social.twitter_username;
-	let instagram_link = photo.user.instagram_username;
-
-		twitter_btn.href = `https://twitter.com/${twitter_link}`;	
-		instagram_btn.href = `https://instagram.com/${instagram_link}`;
-
     // popup image
-
     img.addEventListener("click", () => {
 		current_image = index;
 		showPopup(photo);
@@ -84,6 +74,37 @@ const showPopup = (photo) => {
 	downloadBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
 	
+
+//-----------------
+	// social media links 
+	let twitter_btn = document.querySelector('.twitter-btn');
+	let instagram_btn = document.querySelector('.insta-btn');
+	let twitter_link = photo.user.social.twitter_username;
+	let instagram_link = photo.user.instagram_username;
+
+	console.log(twitter_link);
+	console.log(instagram_link);
+
+	// only showing last user's info - need to fix 
+	// 각각의 이미지에 맞는 히이퍼링크를 넣어줄 것
+	twitter_btn.href = `https://twitter.com/${twitter_link}`;	
+	instagram_btn.href = `https://instagram.com/${instagram_link}`;
+
+	// to remove social media icon when 'null'
+	if (twitter_link  == null){
+		twitter_btn.style.display = 'none';
+	} else {
+		twitter_btn.style.display = 'inline';
+	}
+	if (instagram_link  == null){
+		instagram_btn.style.display = 'none';
+	} else {
+		instagram_btn.style.display = 'inline';
+	}
+//-----------------
+
+
+
 	closeBtn.addEventListener("click", () => {
 		popup.classList.add("hide");
 		gallery.classList.add("hide");
