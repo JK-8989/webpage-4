@@ -286,7 +286,7 @@ form {
 	position: relative;
 	overflow: hidden;
 	border-radius: 10px;
-	transition: all 1s ease;
+	transition: all 0.5s ease;
 	vertical-align: top;
 	object-fit: cover;
 	margin-bottom: 1em;
@@ -356,15 +356,6 @@ h2 { /*Photographer name*/
     justify-content: center;
 	align-items: baseline;
 }
-<<<<<<< HEAD
-.social-media-wrap .profile-photo-wrap { /*photographer's profile wrapper*/
-	width: 30px;
-	height: 30px;
-	background: rgb(109, 109, 109);
-	margin: 0 10px;
-	/* padding: 0 12px; */
-	
-=======
 /*profile thumb nail bg (wrapper)*/
 
 .profile-photo-wrap { 
@@ -372,7 +363,6 @@ h2 { /*Photographer name*/
 	height: 40px;
 	background: rgb(109, 109, 109);
 	margin: 0 10px;
->>>>>>> 5389d15e53ee248bcd476c4d68f5e89f344f3928
 	border-radius: 50%;
 
 	position: relative;
@@ -411,10 +401,7 @@ h2 { /*Photographer name*/
 	position: relative;
 	top: 3px;
 }
-
-/* 'alt attribute' for all images*/
-
-img[alt] { 
+img[alt] { /* 'alt attribute' for all images*/
 	color: var(--popup_text);
 	font-size: 10px;
 	letter-spacing: 2px;
@@ -478,11 +465,7 @@ img[alt] {
 	z-index: 0;
 
 	font-size: 35px;
-<<<<<<< HEAD
-	padding: 8px 12px;
-=======
 	padding: 6px 10px;
->>>>>>> 5389d15e53ee248bcd476c4d68f5e89f344f3928
 	color: var(--popup_text);
 	opacity: 0;
 
