@@ -152,24 +152,6 @@ const showPopup = (photo) => {
 				}
 		}
 		showInfo()
-
-		// let camera = photo.exif.name;
-		// console.log(camera);
-		// if (camera == null){
-		// 	info.innerHTML =
-		// 	photo.user.name +
-		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		// 	photo.user.location +
-		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		// 	'N/A'; // show N/A when no camera info
-		// } else {
-		// 	info.innerHTML =
-		// 	photo.user.name +
-		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		// 	photo.user.location +
-		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		// 	photo.exif.name;
-		// 	}
 		
 	}
 	
