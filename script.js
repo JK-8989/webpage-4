@@ -159,21 +159,6 @@ const showPopup = (photo) => {
 				}
 		}
 		showInfo()
-                    //------------------ 슬라이드 끝 표시해주는 코드
-					// to show end-page icon when no more images can be seen
-					// const endPage1 = document.querySelector('.page-end-1');
-					// const endPage2 = document.querySelector('.page-end-2');
-					// const preBtn = document.querySelector('.pre-btn');
-					// const nextBtn = document.querySelector('.next-btn');
-					// if (index == '0'){
-					// 	preBtn.classList.remove('visible');
-					// 	endPage1.classList.add('visible');
-					// }
-					// if (index == photo.length){
-					// 	nextBtn.classList.remove('visible');
-					// 	endPage2.classList.add('visible');
-					// }
-					//----------------
 		
 	}
 	
