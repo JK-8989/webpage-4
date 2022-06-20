@@ -574,7 +574,7 @@ footer q {
 
 footer .credits::before {
 	content: "";
-	max-width: 90%;
+	max-width: 100%;
 	width: 2500px;
 	height: 1px;
 	margin-top: -20px;
