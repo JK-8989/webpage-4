@@ -27,7 +27,7 @@ const searchImages = () => {
 			// console.log(data);
 			allImages = data.results;
 			displayImages(allImages);
-			console.log(allImages);
+			// console.log(allImages);
 		});
 };
 
@@ -59,8 +59,15 @@ const displayImages = (data) => {
 		current_image = index;
 		showPopup(photo);
 		});
+
+		
+console.log(index)
+//---------------
+
+
 	});
 };
+
 
 const showPopup = (photo) => {
 	const popup = document.querySelector(".popup-bg");
@@ -114,7 +121,7 @@ const showPopup = (photo) => {
 	// thumbnail photo
 	let thumbnail = document.querySelector('#thumb-nail');
 	thumbnail.src = photo.user.profile_image.small;	
-	console.log(thumbnail.src);
+	// console.log(thumbnail.src);
 
 	// info of photos
 		const showInfo = ()=>{
@@ -133,7 +140,7 @@ const showPopup = (photo) => {
 
 
 			let camera = photo.exif.name;
-			console.log(camera);
+			// console.log(camera);
 
 			if (camera == null){
 				info.innerHTML =
@@ -152,6 +159,21 @@ const showPopup = (photo) => {
 				}
 		}
 		showInfo()
+                    //------------------ 슬라이드 끝 표시해주는 코드
+					// to show end-page icon when no more images can be seen
+					// const endPage1 = document.querySelector('.page-end-1');
+					// const endPage2 = document.querySelector('.page-end-2');
+					// const preBtn = document.querySelector('.pre-btn');
+					// const nextBtn = document.querySelector('.next-btn');
+					// if (index == '0'){
+					// 	preBtn.classList.remove('visible');
+					// 	endPage1.classList.add('visible');
+					// }
+					// if (index == photo.length){
+					// 	nextBtn.classList.remove('visible');
+					// 	endPage2.classList.add('visible');
+					// }
+					//----------------
 		
 	}
 	
