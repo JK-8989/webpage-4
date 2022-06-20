@@ -2,8 +2,8 @@
 let searchWords = location.search.split("=").pop();
 
 const access_key = "ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20";
-const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=5`;
-const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=5`;
+const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=15`;
+const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=15`;
 
 const gallery = document.querySelector(".gallery");
 
@@ -118,7 +118,7 @@ const showPopup = (photo) => {
 
 	// info of photos
 		const showInfo = ()=>{
-			
+
 			info.innerHTML =
 			photo.user.name +
 			'&nbsp &nbsp &nbsp' +
@@ -134,6 +134,7 @@ const showPopup = (photo) => {
 
 			let camera = photo.exif.name;
 			console.log(camera);
+
 			if (camera == null){
 				info.innerHTML =
 				photo.user.name +
