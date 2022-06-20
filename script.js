@@ -2,8 +2,8 @@
 let searchWords = location.search.split("=").pop();
 
 const access_key = "ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20";
-const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=10`;
-const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=10`;
+const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=15`;
+const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=15`;
 
 const gallery = document.querySelector(".gallery");
 
@@ -27,7 +27,7 @@ const searchImages = () => {
 			// console.log(data);
 			allImages = data.results;
 			displayImages(allImages);
-			// console.log(allImages);
+			console.log(allImages);
 		});
 };
 
@@ -59,15 +59,8 @@ const displayImages = (data) => {
 		current_image = index;
 		showPopup(photo);
 		});
-
-		
-console.log(index)
-//---------------
-
-
 	});
 };
-
 
 const showPopup = (photo) => {
 	const popup = document.querySelector(".popup-bg");
@@ -121,7 +114,7 @@ const showPopup = (photo) => {
 	// thumbnail photo
 	let thumbnail = document.querySelector('#thumb-nail');
 	thumbnail.src = photo.user.profile_image.small;	
-	// console.log(thumbnail.src);
+	console.log(thumbnail.src);
 
 	// info of photos
 		const showInfo = ()=>{
@@ -140,7 +133,7 @@ const showPopup = (photo) => {
 
 
 			let camera = photo.exif.name;
-			// console.log(camera);
+			console.log(camera);
 
 			if (camera == null){
 				info.innerHTML =
@@ -159,6 +152,24 @@ const showPopup = (photo) => {
 				}
 		}
 		showInfo()
+
+		// let camera = photo.exif.name;
+		// console.log(camera);
+		// if (camera == null){
+		// 	info.innerHTML =
+		// 	photo.user.name +
+		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+		// 	photo.user.location +
+		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+		// 	'N/A'; // show N/A when no camera info
+		// } else {
+		// 	info.innerHTML =
+		// 	photo.user.name +
+		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+		// 	photo.user.location +
+		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
+		// 	photo.exif.name;
+		// 	}
 		
 	}
 	
