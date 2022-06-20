@@ -74,7 +74,7 @@ const showPopup = (photo) => {
 	downloadBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
 	
-	// social media links 
+	// social media links (connecting to corresponding icons)
 	let twitter_btn = document.querySelector('.twitter-btn');
 	let instagram_btn = document.querySelector('.insta-btn');
 	let twitter_link = photo.user.social.twitter_username;
@@ -116,7 +116,7 @@ const showPopup = (photo) => {
 	thumbnail.src = photo.user.profile_image.small;	
 	console.log(thumbnail.src);
 
-	// info of photos
+	// information of photo
 		const showInfo = ()=>{
 
 			info.innerHTML =
@@ -151,26 +151,7 @@ const showPopup = (photo) => {
 				photo.exif.name;
 				}
 		}
-		showInfo()
-
-		// let camera = photo.exif.name;
-		// console.log(camera);
-		// if (camera == null){
-		// 	info.innerHTML =
-		// 	photo.user.name +
-		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		// 	photo.user.location +
-		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		// 	'N/A'; // show N/A when no camera info
-		// } else {
-		// 	info.innerHTML =
-		// 	photo.user.name +
-		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		// 	photo.user.location +
-		// 	'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-		// 	photo.exif.name;
-		// 	}
-		
+		showInfo()		
 	}
 	
 if (searchWords === "") {
