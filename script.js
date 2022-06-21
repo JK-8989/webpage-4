@@ -165,11 +165,15 @@ if (searchWords === "") {
 const preBtn = document.querySelector(".pre-btn");
 const nextBtn = document.querySelector(".next-btn");
 
+const pageEnd1 = document.querySelector('.page-end-1');
+const pageEnd3 = document.querySelector('.page-end-2');
+
+
 preBtn.addEventListener("click", () => {
 	if (current_image > 0) {
 		current_image--;
 		showPopup(allImages[current_image]);
-	}
+	} 
 });
 nextBtn.addEventListener("click", () => {
 		if (current_image < allImages.length - 1) {
@@ -177,3 +181,17 @@ nextBtn.addEventListener("click", () => {
 		showPopup(allImages[current_image]);
 	}
 });
+//------------------
+//to indicate page-end icon 
+
+// const indicatePageENd = () => {
+// 	if (current_image === 0){
+// 		preBtn.classList.remove('visible');
+// 		pageEnd1.classList.add('visible');
+// 	}
+// 	if(current_image === allImages.length){
+// 		nextBtn.classList.remove('visible');
+// 		pageEnd2.classList.add('visible');
+// 	}
+// }
+// indicatePageENd();
