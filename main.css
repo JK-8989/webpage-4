@@ -397,13 +397,16 @@ h2 { /*Photographer name*/
 	position: relative;
 	bottom: 8px;
 
-	border: 2px solid rgba(255, 255, 255, 0.6);
+	border: 2px solid rgba(255, 255, 255, 0.4);
 	vertical-align: top;
 	cursor: pointer;
 
 	overflow: hidden;
 	transition: all 0.5s;
 
+}
+#thumb-nail:hover {
+	border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .social-media-wrap a:nth-child(2),  /* social media icons*/
