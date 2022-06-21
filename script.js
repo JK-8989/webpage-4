@@ -146,29 +146,28 @@ const showPopup = (photo) => {
 	// information of photo
 		const showInfo = ()=>{
 
-			const name = photo.user.name;
-			const location = photo.user.location;
-			const spacing = '&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' 
-		
+		const name = photo.user.name;
+		const location = photo.user.location;
+		const spacing = '&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' 
+	
+		info.innerHTML =
+		name + spacing + location + spacing + photo.height + ' x ' + photo.width;
+
+		let camera = photo.exif.name;
+
+		if (camera == null){
+			info.innerHTML = // show 'N/A' when no camera info
+			name + spacing + location + spacing + 'N/A'; 
+		} else if (location == null) {
+			info.innerHTML = // show 'N/A' when no location info
+			name + spacing + 'N/A' + spacing + photo.exif.name; 
+		} else if (location == null && camera == null){
+			name + spacing + 'N/A' + spacing + 'N/A';
+		} else {
 			info.innerHTML =
-			name + spacing + location + spacing + photo.height + ' x ' + photo.width;
-
-			let camera = photo.exif.name;
-			console.log(camera);
-
-			if (camera == null){
-				info.innerHTML =
-				name + spacing + location + spacing + 'N/A'; // show N/A when no camera info
-			} else if (location == null) {
-				info.innerHTML =
-				name + spacing + 'N/A' + spacing + photo.exif.name; // show N/A when no location info
-			} else if (location == null && camera == null){
-				name + spacing + 'N/A' + spacing + 'N/A';
-			}else {
-				info.innerHTML =
-				name + spacing + location + spacing + photo.exif.name;
-				}
-		
+			name + spacing + location + spacing + photo.exif.name;
+			}
+	
 		}
 		showInfo()		
 	}
