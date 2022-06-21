@@ -62,6 +62,13 @@ const displayImages = (data) => {
 	});
 };
 
+const preBtn = document.querySelector(".pre-btn");
+const nextBtn = document.querySelector(".next-btn");
+
+const pageEnd1 = document.querySelector('.page-end-2');
+const pageEnd2 = document.querySelector('.page-end-1'); // remove after testing
+
+
 const showPopup = (photo) => {
 	const popup = document.querySelector(".popup-bg");
 	const image = document.querySelector(".large-img");
@@ -73,7 +80,26 @@ const showPopup = (photo) => {
 	gallery.classList.remove("hide");
 	downloadBtn.href = photo.links.html;
 	image.src = photo.urls.regular;
-	
+
+	// indicating page-end icons
+	for (let i = 0; i < allImages.length; i++)
+	if (current_image === 0){
+			preBtn.classList.remove('visible');
+			pageEnd1.classList.add('visible');
+			pageEnd2.classList.remove('visible');
+		} else if (current_image !== 0){
+			preBtn.classList.add('visible');
+			pageEnd1.classList.remove('visible');
+		}
+	if (current_image === allImages.length - 1){
+			nextBtn.classList.remove('visible');
+			pageEnd1.classList.remove('visible');
+			pageEnd2.classList.add('visible');
+		} else if (current_image !== allImages.length){
+			nextBtn.classList.add('visible');
+			pageEnd2.classList.remove('visible');
+		}
+
 	// social media links (connecting to corresponding icons)
 	let twitter_btn = document.querySelector('.twitter-btn');
 	let instagram_btn = document.querySelector('.insta-btn');
@@ -162,13 +188,6 @@ if (searchWords === "") {
 
 // pre & next button
 
-const preBtn = document.querySelector(".pre-btn");
-const nextBtn = document.querySelector(".next-btn");
-
-const pageEnd1 = document.querySelector('.page-end-1');
-const pageEnd3 = document.querySelector('.page-end-2');
-
-
 preBtn.addEventListener("click", () => {
 	if (current_image > 0) {
 		current_image--;
@@ -181,17 +200,3 @@ nextBtn.addEventListener("click", () => {
 		showPopup(allImages[current_image]);
 	}
 });
-//------------------
-//to indicate page-end icon 
-
-// const indicatePageENd = () => {
-// 	if (current_image === 0){
-// 		preBtn.classList.remove('visible');
-// 		pageEnd1.classList.add('visible');
-// 	}
-// 	if(current_image === allImages.length){
-// 		nextBtn.classList.remove('visible');
-// 		pageEnd2.classList.add('visible');
-// 	}
-// }
-// indicatePageENd();

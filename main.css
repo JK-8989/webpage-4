@@ -492,7 +492,7 @@ img[alt] {
 .pre-btn,
 .next-btn {
 	position: absolute;
-	z-index: 0;
+	z-index: 1;
 
 	font-size: 35px;
 	padding: 6px 10px;
@@ -532,7 +532,8 @@ img[alt] {
 	font-size: 26px;
 	transition: all 0.5s;
 
-	cursor: pointer;
+	z-index: 0;
+	cursor: alias;
 }
 .page-end-1 {
 	right: 0px;
@@ -546,8 +547,9 @@ img[alt] {
 }
 .page-end-1.visible:hover,
 .page-end-2.visible:hover {
-	opacity: 0.8;
+	cursor: none;
 }
+
 /* footer */
 footer {
 	width: 100vw;
