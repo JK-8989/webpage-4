@@ -248,7 +248,6 @@ form {
 	z-index: 1;
 
 	display: block;
-	transition: all 0.5s;
 }
 .gallery {
 	width: 100vw;
