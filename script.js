@@ -65,8 +65,8 @@ const displayImages = (data) => {
 const preBtn = document.querySelector(".pre-btn");
 const nextBtn = document.querySelector(".next-btn");
 
-const pageEnd1 = document.querySelector('.page-end-2');
-const pageEnd2 = document.querySelector('.page-end-1'); // remove after testing
+const pageEnd1 = document.querySelector('.page-end-1');
+const pageEnd2 = document.querySelector('.page-end-2'); 
 
 
 const showPopup = (photo) => {
@@ -132,9 +132,10 @@ const showPopup = (photo) => {
 
 	
 	//hit image to close
-	image.addEventListener('click', ()=>{
+	image.addEventListener('click', () => {
 		popup.classList.add('hide');
 		gallery.classList.add('hide');
+		
 	})
 
 	// thumbnail photo
