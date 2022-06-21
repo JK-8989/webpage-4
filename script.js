@@ -146,17 +146,24 @@ const showPopup = (photo) => {
 	// information of photo
 		const showInfo = ()=>{
 
+			// testing
+			const name = photo.user.name;
+			const location = photo.user.location;
+			const spacing = '&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' 
+		
 			info.innerHTML =
-			photo.user.name +
-			'&nbsp &nbsp &nbsp' +
-			'|' +
-			'&nbsp &nbsp &nbsp' +
-			photo.user.location +
-			'&nbsp &nbsp &nbsp' +
-			'|' +
-			'&nbsp &nbsp &nbsp' +
-			// photo.exif.name;
-			photo.height + ' x ' + photo.width;
+			name + spacing + location + spacing + photo.height + ' x ' + photo.width;
+
+			// info.innerHTML =
+			// photo.user.name +
+			// '&nbsp &nbsp &nbsp' +
+			// '|' +
+			// '&nbsp &nbsp &nbsp' +
+			// photo.user.location +
+			// '&nbsp &nbsp &nbsp' +
+			// '|' +
+			// '&nbsp &nbsp &nbsp' +
+			// photo.height + ' x ' + photo.width;
 
 
 			let camera = photo.exif.name;
