@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light");
+
 .search-container {
 	width: 80%;
-	height: 80px;
-	margin: 60px auto 20px auto;
+	height: 100px;
+	margin: 30px auto 20px auto;
 	padding: 30px 40px;
 
 	display: flex;
@@ -23,6 +25,18 @@
 .search-input:focus {
 	border: 2px solid var(--input_focus_search);
 }
+.search-icon-box .sub-line-2 {
+	display: block;
+	color: var(--icons_color);
+	opacity: 0.8;
+	font-size: 13px;
+	padding: 10px 0;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+}
+/* home icon */
 .home-icon .material-icons {
 	font-size: 36px;
 	color: var(--icons_color);
@@ -31,6 +45,9 @@
 
 	transition: all 0.5s;
 	user-select: none;
+
+	position: relative;
+	top: 18px;
 }
 .home-icon .material-icons:hover {
 	opacity: 1;
@@ -41,7 +58,7 @@
 }
 #search-icon {
 	position: absolute;
-	top: 5px;
+	top: 40px;
 	right: 8px;
 
 	font-size: 30px;

@@ -3,7 +3,7 @@ let searchWords = location.search.split("=").pop();
 
 const access_key = "ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20";
 const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=15`;
-const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=15`;
+const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=30`;
 
 const gallery = document.querySelector(".gallery");
 
