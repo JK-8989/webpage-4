@@ -156,14 +156,19 @@ const showPopup = (photo) => {
 			let camera = photo.exif.name;
 			console.log(camera);
 
-			if (camera == null){
+			if (camera == null){ // show 'N/A' when no info available
 				info.innerHTML =
-				name + spacing + location + spacing + 'N/A'; // show N/A when no camera info
+				name + spacing + location + spacing + 'N/A'; 
+			} else if (location == null) {
+				info.innerHTML =
+				name + spacing + 'N/A' + spacing + photo.exif.name;
+			} else if (location == null && camera == null){
+				name + spacing + 'N/A' + spacing + 'N/A';
 			} else {
 				info.innerHTML =
-				name + spacing + photo.user.location + spacing + photo.exif.name;
+				name + spacing + location + spacing + photo.exif.name;
 				}
-		}
+
 		showInfo()		
 	}
 	
