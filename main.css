@@ -385,7 +385,7 @@ h2 { /*Photographer name*/
     justify-content: center;
 	align-items: baseline;
 }
-/*profile photo thumb-nail bg (wrapper)*/
+/*profile photo thumb-nail */
 
 #thumb-nail { 
 	width: 40px;
@@ -399,23 +399,12 @@ h2 { /*Photographer name*/
 
 	border: 2px solid rgba(255, 255, 255, 0.6);
 	vertical-align: top;
-	cursor: default;
+	cursor: pointer;
 
 	overflow: hidden;
 	transition: all 0.5s;
 
 }
-/* profile thumb-nail (photo)*/
-
-/* #thumb-nail{ 
-	position: absolute;
-	width: 100%;
-
-	border-radius: 50%;
-	border: 2px solid rgba(255, 255, 255, 0.6);
-	vertical-align: top;
-	cursor: default;
-} */
 
 .social-media-wrap a:nth-child(2),  /* social media icons*/
 .social-media-wrap a:nth-child(3),  
@@ -536,13 +525,12 @@ img[alt] {
 }
 
 
-/* slide arrows : 'end-page' icons*/
+/* slide : 'end-page' icons*/
 
 .page-end-1, 
 .page-end-2 {
 	position: absolute;
 	top: 47.7%;
-	z-index: 5;
 
 	color: var(--popup_text);
 	opacity: 0;
@@ -550,7 +538,7 @@ img[alt] {
 	transition: all 0.5s;
 
 	z-index: 0;
-	cursor: alias;
+	cursor: default;
 }
 .page-end-1 {
 	left: 0px;
