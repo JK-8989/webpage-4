@@ -292,10 +292,20 @@ form {
 }
 @media (min-width: 501px) {
 	.gallery {
+    columns: 2;
+	}
+}
+@media (min-width: 601px) {
+	.gallery {
     columns: 3;
 	}
 }
-@media (min-width: 1000px) {
+@media (min-width: 800px){
+	.gallery {
+		columns: 4;
+		}
+}
+@media (min-width: 1200px) {
 	.gallery {
     columns: 5;
 	}
