@@ -146,7 +146,6 @@ const showPopup = (photo) => {
 	// information of photo
 		const showInfo = ()=>{
 
-			// testing
 			const name = photo.user.name;
 			const location = photo.user.location;
 			const spacing = '&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' 
@@ -154,35 +153,15 @@ const showPopup = (photo) => {
 			info.innerHTML =
 			name + spacing + location + spacing + photo.height + ' x ' + photo.width;
 
-			// info.innerHTML =
-			// photo.user.name +
-			// '&nbsp &nbsp &nbsp' +
-			// '|' +
-			// '&nbsp &nbsp &nbsp' +
-			// photo.user.location +
-			// '&nbsp &nbsp &nbsp' +
-			// '|' +
-			// '&nbsp &nbsp &nbsp' +
-			// photo.height + ' x ' + photo.width;
-
-
 			let camera = photo.exif.name;
 			console.log(camera);
 
 			if (camera == null){
 				info.innerHTML =
-				photo.user.name +
-				'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-				photo.user.location +
-				'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-				'N/A'; // show N/A when no camera info
+				name + spacing + location + spacing + 'N/A'; // show N/A when no camera info
 			} else {
 				info.innerHTML =
-				photo.user.name +
-				'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-				photo.user.location +
-				'&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' +
-				photo.exif.name;
+				name + spacing + photo.user.location + spacing + photo.exif.name;
 				}
 		}
 		showInfo()		
