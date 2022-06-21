@@ -256,7 +256,6 @@ form {
 	padding: 15px 30px 40px 15px;
 	columns: 5;
 	column-gap: 20px;
-	transition: all 0.5s;
 }
 .gallery.hide::before {
 	display: none;
@@ -388,7 +387,7 @@ h2 { /*Photographer name*/
 }
 /*profile photo thumb-nail bg (wrapper)*/
 
-.profile-photo-wrap { 
+#thumb-nail { 
 	width: 40px;
 	height: 40px;
 	background: rgb(109, 109, 109);
@@ -396,26 +395,32 @@ h2 { /*Photographer name*/
 	border-radius: 50%;
 
 	position: relative;
-	bottom: -11px;
+	bottom: 8px;
 
-	cursor: pointer;
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	vertical-align: top;
+	cursor: default;
+
 	overflow: hidden;
 	transition: all 0.5s;
+
 }
 /* profile thumb-nail (photo)*/
 
-.profile-photo-wrap #thumb-nail{ 
+/* #thumb-nail{ 
 	position: absolute;
 	width: 100%;
 
 	border-radius: 50%;
 	border: 2px solid rgba(255, 255, 255, 0.6);
 	vertical-align: top;
-}
-.profile-photo-wrap #thumb-nail {
 	cursor: default;
-}
-.social-media-wrap a { /* social media icons*/
+} */
+
+.social-media-wrap a:nth-child(2),  /* social media icons*/
+.social-media-wrap a:nth-child(3),  
+.social-media-wrap a:nth-child(4),  
+.social-media-wrap a:nth-child(5) { 
     color: var(--icons_color);
     font-size: 18px;
 	opacity: 0.5;

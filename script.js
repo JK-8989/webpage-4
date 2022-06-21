@@ -143,6 +143,11 @@ const showPopup = (photo) => {
 	thumbnail.src = photo.user.profile_image.small;	
 	console.log(thumbnail.src);
 
+	// to link thumbnail phto to photographer's collection page
+	thumbnail.addEventListener('click', ()=>{
+		
+	})
+	
 	// information of photo
 		const showInfo = ()=>{
 
