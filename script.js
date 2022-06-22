@@ -159,6 +159,7 @@ const showPopup = (photo) => {
 	
 		info.innerHTML =
 		name + spacing + location + spacing + photo.height + ' x ' + photo.width;
+		
 		let camera = photo.exif.name;
 		if (camera == null){
 			info.innerHTML = // show 'N/A' when no camera info

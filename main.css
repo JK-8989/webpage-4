@@ -396,21 +396,19 @@ h2 { /*Photographer name*/
 	position: relative;
 	bottom: 8px;
 
-	border: 2px solid rgba(255, 255, 255, 0.4);
+	border: 2px solid rgba(255, 255, 255, 0.3);
 	vertical-align: top;
 	cursor: pointer;
 
 	overflow: hidden;
 	transition: all 0.5s;
-
 }
 #thumb-nail:hover {
 	border: 2px solid rgba(255, 255, 255, 0.8);
 	box-shadow: rgba(225, 225, 225, 0.2) 0px 2px 8px 0px;
-	/* box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px; */
 }
-
-.social-media-wrap a:nth-child(2),  /* social media icons*/
+/* social media icons*/
+.social-media-wrap a:nth-child(2),  
 .social-media-wrap a:nth-child(3),  
 .social-media-wrap a:nth-child(4),  
 .social-media-wrap a:nth-child(5) { 
