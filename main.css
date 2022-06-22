@@ -406,6 +406,8 @@ h2 { /*Photographer name*/
 }
 #thumb-nail:hover {
 	border: 2px solid rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(225, 225, 225, 0.2) 0px 2px 8px 0px;
+	/* box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px; */
 }
 
 .social-media-wrap a:nth-child(2),  /* social media icons*/
@@ -534,6 +536,7 @@ img[alt] {
 	position: absolute;
 	top: 47.7%;
 
+	/* color: var(--popup_text); */
 	color: var(--popup_text);
 	opacity: 0;
 	font-size: 26px;
@@ -550,7 +553,7 @@ img[alt] {
 }
 .page-end-1.visible,
 .page-end-2.visible {
-	opacity: 0.3;
+	opacity: 0.5;
 }
 
 /* footer */

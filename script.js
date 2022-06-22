@@ -2,8 +2,8 @@
 let searchWords = location.search.split("=").pop();
 
 const access_key = "ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20";
-const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=10`;
-const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=10`;
+const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=50`;
+const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=30`;
 
 const gallery = document.querySelector(".gallery");
 
@@ -140,7 +140,7 @@ const showPopup = (photo) => {
 
 	// thumbnail photo
 	let thumbnail = document.querySelector('#thumb-nail');
-	
+
 	thumbnail.src = photo.user.profile_image.small;	
 	console.log(thumbnail.src);
 
@@ -160,16 +160,22 @@ const showPopup = (photo) => {
 		info.innerHTML =
 		name + spacing + location + spacing + photo.height + ' x ' + photo.width;
 
+		if (location == null) {
+			info.innerHTML =
+			name + spacing + 'N/A' + spacing + photo.height + ' x ' + photo.width;
+		}
 		let camera = photo.exif.name;
 
-		if (camera == null){
+		if (location == null && camera == null) {
 			info.innerHTML = // show 'N/A' when no camera info
-			name + spacing + location + spacing + 'N/A'; 
+			name + spacing + 'N/A' + spacing + 'N/A';
+			// name + spacing + location + spacing + 'N/A'; 
 		} else if (location == null) {
 			info.innerHTML = // show 'N/A' when no location info
 			name + spacing + 'N/A' + spacing + photo.exif.name; 
-		} else if (location == null && camera == null){
-			name + spacing + 'N/A' + spacing + 'N/A';
+		} else if (camera == null) {
+			// name + spacing + 'N/A' + spacing + 'N/A';
+			name + spacing + location + spacing + 'N/A'; 
 		} else {
 			info.innerHTML =
 			name + spacing + location + spacing + photo.exif.name;
