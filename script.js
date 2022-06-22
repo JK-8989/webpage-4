@@ -151,29 +151,30 @@ const showPopup = (photo) => {
 	})
 	
 	let camera;
-	// information of photo
+	// info of photo
 	const showInfo = ()=>{
-		const name = photo.user.name;
-		const location = photo.user.location;
+		const Name = photo.user.name;
 		const spacing = '&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' 
 	
 		info.innerHTML =
-		name + spacing + location + spacing + photo.height + ' x ' + photo.width;
-		
+		Name + spacing + photo.user.location + spacing + photo.height + ' x ' + photo.width;
+
+		// show 'N/A' when no specific photo info
+
 		let camera = photo.exif.name;
-		if (camera == null){
-			info.innerHTML = // show 'N/A' when no camera info
-			name + spacing + location + spacing + 'N/A'; 
-		} else if (location == null) {
-			info.innerHTML = // show 'N/A' when no location info
-			name + spacing + 'N/A' + spacing + photo.exif.name; 
-		} else if (location == null && camera == null){
-			name + spacing + 'N/A' + spacing + 'N/A';
+
+		if (photo.user.location == null && camera == null){
+			Name + spacing + 'N/A' + spacing + 'N/A';
+		} else if (photo.user.location == null){
+			info.innerHTML = 
+			Name + spacing + 'N/A' + spacing + photo.exif.name; 
+		} else if (camera == null){
+			info.innerHTML = 
+			Name + spacing + photo.user.location + spacing + 'N/A'; 
 		} else {
 			info.innerHTML =
-			name + spacing + location + spacing + photo.exif.name;
+			Name + spacing + photo.user.location + spacing + photo.exif.name;
 			}
-	
 		}
 		showInfo()		
 	}
@@ -198,3 +199,15 @@ nextBtn.addEventListener("click", () => {
 		showPopup(allImages[current_image]);
 	}
 });
+
+// const showError = () => {
+
+// 	const inputBox = document.querySelector('.search-input');
+// 	let text = inputBox.getAttribute('placeholder')
+// 	console.log(inputBox);
+
+// 	if (allImages.length < 0) {
+// 		text.innerHTML = 'Oops! Try again with better spelling.'
+// 	}
+// 	showError();
+// }
