@@ -31,14 +31,16 @@ const searchImages = () => {
 			console.log(data);
 		
 			const errorMessage = document.querySelector('.error-message');
-			// console.log(errorMessage)
-			const triangle = document.querySelector('.error-message::before');
-		
-			if (data.total === 0) {
-				errorMessage.style.opacity = 1;
-				// triangle.style.opacity = 1;
-			};
 			
+		
+			const showError = () => {
+				if (data.total === 0) {
+					errorMessage.style.opacity = 1;
+					errorMessage.innerHTML = `We could not find "${searchWords}", try again`
+				};		
+			}
+			showError()
+				
 		});
 };
 
