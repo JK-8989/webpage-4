@@ -12,6 +12,8 @@
 	--error_message_text: rgb(33, 33, 33);
 	--error_message_bg: rgb(175, 122, 32);
 	--search_con_height: 100px;
+	--tooltip_bg: grey;
+	--arrow-size: 7px;
 	
 }
 * {
@@ -201,11 +203,11 @@ nav ul #link-ref {
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, 
 				rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.search-box:focus {
+input:focus {
 	border: 2px solid rgba(0, 0, 0, 0.6);
 }
 input::placeholder {
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 }
 form {
 	position: relative;
@@ -367,7 +369,7 @@ h2 { /*Photographer name*/
 	justify-content: center;
 	align-items: center;
 	z-index: 2;
-	overflow: hidden;
+	/* overflow: hidden; */
 	transition: all 0.5s;
 	opacity: 1;
 }
@@ -544,7 +546,7 @@ img[alt] {
 	transition: all 0.5s;
 
 	z-index: 0;
-	cursor: default;
+	cursor: pointer;
 }
 .page-end-1 {
 	left: 0px;
@@ -555,7 +557,12 @@ img[alt] {
 .page-end-1.visible,
 .page-end-2.visible {
 	opacity: 0.5;
+	z-index: 2;
 }
+/* .page-end-1.visible:hover,
+.page-end-2.visible:hover {
+	cursor: default;
+} */
 
 /* footer */
 footer {
