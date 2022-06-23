@@ -1,5 +1,6 @@
 // Unsplash Radom Photo API
 let searchWords = location.search.split("=").pop();
+console.log(searchWords);
 
 const access_key = "ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20";
 const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=50`;
@@ -14,7 +15,7 @@ const getImages = () => {
 	fetch(random_photo_url)
 		.then((res) => res.json())
 		.then((data) => {
-			// console.log(data);
+
 			allImages = data;
 			displayImages(allImages);
 		});
@@ -24,7 +25,7 @@ const searchImages = () => {
 	fetch(search_photo_url)
 		.then((res) => res.json())
 		.then((data) => {
-			// console.log(data);
+
 			allImages = data.results;
 			displayImages(allImages);
 			console.log(allImages);
@@ -36,7 +37,7 @@ const searchImages = () => {
 			const showError = () => {
 				if (data.total === 0) {
 					errorMessage.style.opacity = 1;
-					errorMessage.innerHTML = `We could not find "${searchWords}", try again`
+					errorMessage.innerHTML = `We could not find "${searchWords}", try again`;
 				};		
 			}
 			showError()
@@ -47,7 +48,6 @@ const searchImages = () => {
 
 const displayImages = (data) => {
 	data.forEach((photo, index) => {
-		// console.log(photo);
 
     let img = document.createElement("img");
     let itemDiv = document.createElement("div");
@@ -156,7 +156,6 @@ const showPopup = (photo) => {
 	let thumbnail = document.querySelector('#thumb-nail');
 
 	thumbnail.src = photo.user.profile_image.small;	
-	// console.log(thumbnail.src);
 
 	// to link thumbnail photo to photographer's collection page
 	thumbnail.addEventListener('click', ()=>{
@@ -164,9 +163,9 @@ const showPopup = (photo) => {
 		thumb_link.href = photo.user.links.html;
 	})
 	
-	let camera;
-	// info of photo
-	const showInfo = ()=>{
+		let camera;
+		// info of photo
+		const showInfo = ()=>{
 		const Name = photo.user.name;
 		const spacing = '&nbsp &nbsp &nbsp' + '|' + '&nbsp &nbsp &nbsp' 
 	
