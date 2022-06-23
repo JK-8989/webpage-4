@@ -11,6 +11,7 @@
 	--footer_color: rgba(233, 233, 233, 0.5);
 	--error_message_text: rgb(33, 33, 33);
 	--error_message_bg: rgb(175, 122, 32);
+	--search_con_height: 100px;
 	
 }
 * {
@@ -559,7 +560,7 @@ img[alt] {
 /* footer */
 footer {
 	width: 100vw;
-	min-height: 500px;
+	min-height: calc(90vh - var(--search_con_height));
 	height: auto;
 	display: flex;
 	flex-direction:column;
