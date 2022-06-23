@@ -213,12 +213,4 @@ nextBtn.addEventListener("click", () => {
 	}
 });
 
-// const showError = () => {
 
-	const errorMessage = document.querySelector('.error-message');
-	const triangle = document.querySelector('.error-message::before');
-
-	if (allImages = 0) {
-		errorMessage.style.opacity = 1;
-		triangle.style.opacity = 1;
-	};
