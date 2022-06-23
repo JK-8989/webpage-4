@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/main.css">
         <link rel="stylesheet" href="./css/search.css">
+        <link rel="stylesheet" href="./css/tooltips.css">
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <script src="https://kit.fontawesome.com/2ee8ce4aa8.js" crossorigin="anonymous"></script>
@@ -32,14 +33,14 @@
                 <a href="#" class="twitter-btn" target="_blank" ><i class="fa-brands fa-twitter fa-xs"></i></a>
                 <a href="#" class="insta-btn" target="_blank" ><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" class="link-btn" target="_blank"><ion-icon name="link"></ion-icon></a>
-                <a href="#" class="close-btn" target="_blank"><ion-icon name="close"></ion-icon></a>
+                <a class="close-btn" target="_blank"><ion-icon name="close"></ion-icon></a>
             </div>
             <img src="" class="large-img" alt="">
             <p class="info"></p>
-            <a class="page-end-1 visible"><ion-icon name="stop-circle-outline"></ion-icon></a>
+            <a class="page-end-1 visible" data-tooltip="Page End"><ion-icon id="end-1" name="stop-circle-outline"></ion-icon></a>
             <a class="pre-btn visible"><ion-icon name="chevron-back-outline"></ion-icon></a>
             <a class="next-btn visible"><ion-icon name="chevron-forward-outline"></ion-icon></a>
-            <a class="page-end-2 visible"><ion-icon name="stop-circle-outline"></ion-icon><a>     
+            <a class="page-end-2 visible" data-tooltip="Page End"><ion-icon id="end-2" name="stop-circle-outline"></ion-icon><a>     
         </div>
         <section class="gallery hide">
         <!-- tags structure being created by JavaScript on load
