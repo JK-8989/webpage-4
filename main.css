@@ -8,7 +8,9 @@
 	--popup_text: rgba(255, 255, 255, 0.8);
 	--icons_color: rgba(255, 255, 255, 1);
 	--input_focus_search: rgba(0, 0, 0, 0.3);
-	--footer_color: rgba(255, 255, 255, 0.5);
+	--footer_color: rgba(233, 233, 233, 0.5);
+	--error_message_text: rgb(33, 33, 33);
+	--error_message_bg: rgb(175, 122, 32);
 	
 }
 * {
@@ -110,7 +112,7 @@ nav ul #link-ref {
 	z-index: 0;
 
 	text-align: center;
-
+	/* background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80'); */
 	background-image: url("https://images.unsplash.com/photo-1490604001847-b712b0c2f967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1853&q=80");
 	background-size: cover;
 	background-position: top;

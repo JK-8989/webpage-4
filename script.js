@@ -14,7 +14,7 @@ const getImages = () => {
 	fetch(random_photo_url)
 		.then((res) => res.json())
 		.then((data) => {
-			console.log(data);
+			// console.log(data);
 			allImages = data;
 			displayImages(allImages);
 		});
@@ -28,12 +28,24 @@ const searchImages = () => {
 			allImages = data.results;
 			displayImages(allImages);
 			console.log(allImages);
+			console.log(data);
+		
+			const errorMessage = document.querySelector('.error-message');
+			// console.log(errorMessage)
+			const triangle = document.querySelector('.error-message::before');
+		
+			if (data.total === 0) {
+				errorMessage.style.opacity = 1;
+				// triangle.style.opacity = 1;
+			};
+			
 		});
 };
 
+
 const displayImages = (data) => {
 	data.forEach((photo, index) => {
-		console.log(photo);
+		// console.log(photo);
 
     let img = document.createElement("img");
     let itemDiv = document.createElement("div");
@@ -142,7 +154,7 @@ const showPopup = (photo) => {
 	let thumbnail = document.querySelector('#thumb-nail');
 
 	thumbnail.src = photo.user.profile_image.small;	
-	console.log(thumbnail.src);
+	// console.log(thumbnail.src);
 
 	// to link thumbnail photo to photographer's collection page
 	thumbnail.addEventListener('click', ()=>{
@@ -202,12 +214,10 @@ nextBtn.addEventListener("click", () => {
 
 // const showError = () => {
 
-// 	const inputBox = document.querySelector('.search-input');
-// 	let text = inputBox.getAttribute('placeholder')
-// 	console.log(inputBox);
+	const errorMessage = document.querySelector('.error-message');
+	const triangle = document.querySelector('.error-message::before');
 
-// 	if (allImages.length < 0) {
-// 		text.innerHTML = 'Oops! Try again with better spelling.'
-// 	}
-// 	showError();
-// }
+	if (allImages = 0) {
+		errorMessage.style.opacity = 1;
+		triangle.style.opacity = 1;
+	};

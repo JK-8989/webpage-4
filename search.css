@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light");
-
 .search-container {
 	width: 80%;
 	height: 100px;
@@ -71,4 +69,32 @@
     width: 100%;
 	}
 }
+.error-message {
+	display: inline;
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+	border-radius: 8px;
+	background-color: var(--error_message_bg);
+	opacity: 0;
+	color: var(--error_message_text);
+
+	position: absolute;
+	top: 105px;
+	left: 85px;
+
+	transform-origin: top center;
+	transition: all 0.5s;
+}
+.error-message::before {
+	content: '';
+	border: 10px solid transparent;
+	border-bottom-color: var(--error_message_bg);
+	
+	opacity: 0;
+	position: relative;
+	top: -35px;
+}
+
 
