@@ -314,7 +314,7 @@ form {
 	}
 }
 
-/* elements created by javascript*/
+/* elements created by javascript: landing page photo display section*/
 .item {
 	position: relative;
 	overflow: hidden;
@@ -435,7 +435,7 @@ h2 { /*Photographer name*/
 	position: relative;
 	top: 3px;
 }
-ion-icon:before { 
+ion-icon:before { /* to remove default tooltip form ion-icons*/
     content: '';
     position: absolute;
     width: 100%;
