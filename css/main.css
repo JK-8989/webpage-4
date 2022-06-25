@@ -319,7 +319,7 @@ form {
 	position: relative;
 	overflow: hidden;
 	border-radius: 10px;
-	transition: all 0.5s ease;
+	transition: all 0.5s;
 	vertical-align: top;
 	object-fit: cover;
 	margin-bottom: 1em;
@@ -371,7 +371,6 @@ h2 { /*Photographer name*/
 	z-index: 2;
 	transition: opacity 1.5s;
 	opacity: 1;
-	transition: all 0.5s;
 }
 .popup-bg.hide {
 	display: none;
@@ -405,7 +404,6 @@ h2 { /*Photographer name*/
 	vertical-align: top;
 	cursor: pointer;
 
-	/* overflow: hidden; */
 	transition: all 0.5s;
 }
 #thumb-nail:hover {
