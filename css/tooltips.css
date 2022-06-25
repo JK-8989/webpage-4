@@ -2,10 +2,20 @@
 	--tooltip_bg: grey;
 	--arrow-size: 7px;	
 }
-
-/* page-end icon tooltip */
+.collection,
+.twitter-btn,
+.insta-btn,
+.link-btn,
+.close-btn {
+    position: relative;
+}
 .page-end-1::before,
-.page-end-2::before{
+.page-end-2::before,
+.collection::before,
+.twitter-btn::before,
+.insta-btn::before,
+.link-btn::before,
+.close-btn::before {
     position: absolute;
     top: -.3em;
     left: 35%;
@@ -24,15 +34,30 @@
     width: max-content;
 }
 .page-end-1.visible:hover::before,
-.page-end-2.visible:hover::before {
+.page-end-2.visible:hover::before,
+.collection:hover::before,
+.twitter-btn:hover::before,
+.insta-btn:hover::before,
+.link-btn:hover::before,
+.close-btn:hover::before  {
     transform: translateX(-50%) translateY(-100%) scale(1);
 }
 .page-end-1.visible:hover::after,
-.page-end-2.visible:hover::after {
+.page-end-2.visible:hover::after,
+.collection:hover::after,
+.twitter-btn:hover::after,
+.insta-btn:hover::after,
+.link-btn:hover::after,
+.close-btn:hover::after {
     opacity: 1;
 }
 .page-end-1::after,
-.page-end-2::after {
+.page-end-2::after,
+.collection::after,
+.twitter-btn::after,
+.insta-btn::after,
+.link-btn::after,
+.close-btn::after {
     content: '';
     border: var(--arrow-size) solid transparent;
     border-top-color: var(--tooltip_bg);
@@ -43,100 +68,28 @@
     opacity: 0;
     transform: translateX(-50%) translateY(-100%) scale(0);
 }
-
-/* thumbnail collection link tooltip */
-.collection {
-    position: relative;
-}
 .collection::before {
-    position: absolute;
     top: -2em;
     left: 42%;
-    transform: translateX(-50%) translateY(-100%) scale(0);
-    font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    letter-spacing: 2px;
-    border-radius: 3px;
-    transform-origin: bottom center;
-    transition: all 0.5s;
-
-    content: attr(data-tooltip);
-    background: var(--tooltip_bg);
-    color:var(--icons_color);
-    padding: .5em;
-    width: max-content;
 }
-.collection:hover::before {
-    transform: translateX(-50%) translateY(-100%) scale(1);
-}
-.collection:hover::after {
-    opacity: 1;
-}
-.collection::after {
-    content: '';
-    border: var(--arrow-size) solid transparent;
-    border-top-color: var(--tooltip_bg);
-    position: relative;
+.collection::after  {
     top: -7px;
     left: -18px;
-    transform-origin: top center;
-    opacity: 0;
 } 
-/*social media icon tooltips*/
-.twitter-btn,
-.insta-btn,
-.link-btn,
-.close-btn {
-    position: relative;
-}
-
-.twitter-btn::before,
-.insta-btn::before,
 .link-btn::before,
 .close-btn::before {
-    position: absolute;
     top: -0.6em;
     left: 38%;
-    transform: translateX(-50%) translateY(-100%) scale(0);
-    font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    letter-spacing: 2px;
-    border-radius: 3px;
-    transform-origin: bottom center;
-    transition: all 0.5s;
-
-    content: attr(data-tooltip);
-    background: var(--tooltip_bg);
-    color:var(--icons_color);
-    padding: .5em;
-    width: max-content;
 }
 .twitter-btn::before,
 .insta-btn::before {
+    top: -0.6em;
     left: 34%;
-}
-.twitter-btn:hover::before,
-.insta-btn:hover::before,
-.link-btn:hover::before,
-.close-btn:hover::before {
-    transform: translateX(-50%) translateY(-100%) scale(1);
-}
-.twitter-btn:hover::after,
-.insta-btn:hover::after,
-.link-btn:hover::after,
-.close-btn:hover::after {
-    opacity: 1;
 }
 .twitter-btn::after,
 .insta-btn::after,
 .link-btn::after,
 .close-btn::after {
-    content: '';
-    border: var(--arrow-size) solid transparent;
-    border-top-color: var(--tooltip_bg);
-    position: relative;
     top: -9px;
     left: -15px;
-    transform-origin: top center;
-    opacity: 0;
 } 
