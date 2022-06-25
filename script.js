@@ -3,7 +3,7 @@ let searchWords = location.search.split("=").pop();
 console.log(searchWords);
 
 const access_key = "ESDjSj2JEgvd-Fhuolf4mGHaIagjWFVWZpTh8dLNp20";
-const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=10`;
+const random_photo_url = `https://api.unsplash.com/photos/random?client_id=${access_key}&count=50`;
 const search_photo_url = `https://api.unsplash.com/search/photos?client_id=${access_key}&query=${searchWords}&per_page=10`;
 
 const gallery = document.querySelector(".gallery");
@@ -57,6 +57,7 @@ const displayImages = (data) => {
     let h2 = document.createElement("h2");
 
     const photographerName = document.createTextNode(photo.user.name);
+
     img.src = photo.urls.regular;
     img.alt = "An image from Unsplash.com"; 
 

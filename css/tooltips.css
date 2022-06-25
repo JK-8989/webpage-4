@@ -134,7 +134,7 @@
 .insta-btn:hover::after,
 .link-btn:hover::after,
 .close-btn:hover::after {
-    /* transform: translateX(-50%) translateY(-100%) scale(1); */
+    transform: translateX(-50%) translateY(-100%) scale(1);
     opacity: 1;
 }
 .twitter-btn::after,
@@ -145,12 +145,8 @@
     border: var(--arrow-size) solid transparent;
     border-top-color: var(--tooltip_bg);
     position: relative;
-    top: -7px;
+    top: -9px;
     left: -15px;
     transform-origin: top center;
     opacity: 0;
 } 
-.link-btn::after,
-.close-btn::after {
-    top: -9px;
-}

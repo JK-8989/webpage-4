@@ -67,7 +67,7 @@ nav ul {
 }
 nav ul li {
 	list-style: none;
-	font-size: 36px;
+	font-size: 28px;
 	padding: 0 20px;
 	color: var(--main_text);
 
@@ -82,7 +82,7 @@ nav ul li a {
 }
 nav ul #read-me {
 	/* font-family: 'Poppins', sans-serif; */
-	font-size: 18px;
+	font-size: 14px;
 	letter-spacing: 2px;
 	padding-top: 3px;
 
@@ -111,7 +111,7 @@ nav ul #link-ref {
 .header-section {
 	position: relative;
 	width: 100vw;
-	height: 90vh;
+	height: 70vh;
 	z-index: 0;
 
 	text-align: center;
@@ -371,6 +371,7 @@ h2 { /*Photographer name*/
 	z-index: 2;
 	transition: opacity 1.5s;
 	opacity: 1;
+	transition: all 0.5s;
 }
 .popup-bg.hide {
 	display: none;
