@@ -1,7 +1,11 @@
+:root {
+	--tooltip_bg: grey;
+	--arrow-size: 7px;	
+}
+
 /* page-end icon tooltip */
 .page-end-1::before,
 .page-end-2::before{
-    content: '';
     position: absolute;
     top: -.3em;
     left: 35%;
@@ -12,12 +16,10 @@
     border-radius: 3px;
     transform-origin: bottom center;
     transition: all 0.5s;
-}
-.page-end-1::before,
-.page-end-2::before {
+
     content: attr(data-tooltip);
     background: var(--tooltip_bg);
-    color: white;
+    color:var(--icons_color);
     padding: .5em;
     width: max-content;
 }
@@ -27,7 +29,6 @@
 }
 .page-end-1.visible:hover::after,
 .page-end-2.visible:hover::after {
-    transform: translateX(-50%) translateY(-100%) scale(1);
     opacity: 1;
 }
 .page-end-1::after,
@@ -48,7 +49,6 @@
     position: relative;
 }
 .collection::before {
-    content: '';
     position: absolute;
     top: -2em;
     left: 42%;
@@ -60,11 +60,9 @@
     transform-origin: bottom center;
     transition: all 0.5s;
 
-}
-.collection::before {
     content: attr(data-tooltip);
     background: var(--tooltip_bg);
-    color: white;
+    color:var(--icons_color);
     padding: .5em;
     width: max-content;
 }
@@ -72,7 +70,6 @@
     transform: translateX(-50%) translateY(-100%) scale(1);
 }
 .collection:hover::after {
-    transform: translateX(-50%) translateY(-100%) scale(1);
     opacity: 1;
 }
 .collection::after {
@@ -83,7 +80,6 @@
     top: -7px;
     left: -18px;
     transform-origin: top center;
-    transform: translateX(-50%) translateY(-100%) scale(0);
     opacity: 0;
 } 
 /*social media icon tooltips*/
@@ -98,7 +94,6 @@
 .insta-btn::before,
 .link-btn::before,
 .close-btn::before {
-    content: '';
     position: absolute;
     top: -0.6em;
     left: 38%;
@@ -109,20 +104,16 @@
     border-radius: 3px;
     transform-origin: bottom center;
     transition: all 0.5s;
+
+    content: attr(data-tooltip);
+    background: var(--tooltip_bg);
+    color:var(--icons_color);
+    padding: .5em;
+    width: max-content;
 }
 .twitter-btn::before,
 .insta-btn::before {
     left: 34%;
-}
-.twitter-btn::before,
-.insta-btn::before,
-.link-btn::before,
-.close-btn::before {
-    content: attr(data-tooltip);
-    background: var(--tooltip_bg);
-    color: white;
-    padding: .5em;
-    width: max-content;
 }
 .twitter-btn:hover::before,
 .insta-btn:hover::before,
@@ -134,7 +125,6 @@
 .insta-btn:hover::after,
 .link-btn:hover::after,
 .close-btn:hover::after {
-    transform: translateX(-50%) translateY(-100%) scale(1);
     opacity: 1;
 }
 .twitter-btn::after,
