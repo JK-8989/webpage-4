@@ -1,3 +1,4 @@
+/* page-end icon tooltip */
 .page-end-1::before,
 .page-end-2::before{
     content: '';
@@ -42,7 +43,7 @@
     transform: translateX(-50%) translateY(-100%) scale(0);
 }
 
-/* thumbnail collection link */
+/* thumbnail collection link tooltip */
 .collection {
     position: relative;
 }
@@ -85,3 +86,71 @@
     transform: translateX(-50%) translateY(-100%) scale(0);
     opacity: 0;
 } 
+/*social media icon tooltips*/
+.twitter-btn,
+.insta-btn,
+.link-btn,
+.close-btn {
+    position: relative;
+}
+
+.twitter-btn::before,
+.insta-btn::before,
+.link-btn::before,
+.close-btn::before {
+    content: '';
+    position: absolute;
+    top: -0.6em;
+    left: 38%;
+    transform: translateX(-50%) translateY(-100%) scale(0);
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    transform-origin: bottom center;
+    transition: all 0.5s;
+}
+.twitter-btn::before,
+.insta-btn::before {
+    left: 34%;
+}
+.twitter-btn::before,
+.insta-btn::before,
+.link-btn::before,
+.close-btn::before {
+    content: attr(data-tooltip);
+    background: var(--tooltip_bg);
+    color: white;
+    padding: .5em;
+    width: max-content;
+}
+.twitter-btn:hover::before,
+.insta-btn:hover::before,
+.link-btn:hover::before,
+.close-btn:hover::before {
+    transform: translateX(-50%) translateY(-100%) scale(1);
+}
+.twitter-btn:hover::after,
+.insta-btn:hover::after,
+.link-btn:hover::after,
+.close-btn:hover::after {
+    /* transform: translateX(-50%) translateY(-100%) scale(1); */
+    opacity: 1;
+}
+.twitter-btn::after,
+.insta-btn::after,
+.link-btn::after,
+.close-btn::after {
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-top-color: var(--tooltip_bg);
+    position: relative;
+    top: -7px;
+    left: -15px;
+    transform-origin: top center;
+    opacity: 0;
+} 
+.link-btn::after,
+.close-btn::after {
+    top: -9px;
+}
